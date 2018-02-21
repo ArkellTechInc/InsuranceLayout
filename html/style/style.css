@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------------- CSS RESET -------------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+section, article, aside, header, footer, nav, dialog, figure {
+	display:block;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/*--------------------------------------------------------------------- END OF RESET -------------------------------------------------------------------------- */
+@media (orientation: portrait) {
+	#botMenu {
+		position: absolute;
+		top: 80vh;
+		left: 0;
+		width: 100vw;
+		height: 20vh;
+		background-color: #0b52a0;
+	}
+	#menuButton {
+		width: 50px;
+		height: 50px;
+		background-color: red;
+	}
+	#sideMenu {
+		position: absolute;
+		top: 0;
+		left: -250px;/* move this to 0 */
+		width: 250px;
+		height: 100vh;
+		background-color: #0b52a0;
+	}
+	#topMenu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 10vh;
+		background-color: #0b52a0;
+	}
+	
+}
+@media (orientation: landscape) {
+	#menuButton {
+		width: 50px;
+		height: 50px;
+		background-color: red;
+	}
+	#sideMenu {
+		position: absolute;
+		top: 0;
+		left: -250px;/* move this to 0 */
+		width: 250px;
+		height: 100vh;
+		background-color: #0b52a0;
+	}
+	#topMenu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 10vh;
+	}
+}
+@media (orientation: landscape ) and (min-device-width: 1200px) {
+	#menuButton {
+		display: none;
+	}
+	#sideMenu {
+		position: absolute;
+		top: 0;
+		/*left: 0;*/
+		width: 250px;
+		height: 100vh;
+		background-color: #0b52a0;
+	}
+}
