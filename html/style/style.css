@@ -49,25 +49,45 @@ blockquote, q {
 /*--------------------------------------------------------------------- END OF RESET -------------------------------------------------------------------------- */
 
 #sideMenu {
-	padding: 10px;
 	box-sizing: border-box;
+	padding: 10px;
 	color: white;
+	background-color: #0b52a0;
 }
 
 #bigolbox {
+	box-sizing: border-box;
 	position: absolute;
 	top: 5%;
 	left: 5%;
 	width: 90%;
 	height: 90%;
-	
 	text-align: center;
 	vertical-align: middle;
 	background-color: #F8BBD0;
 	
 }
+#menuButton {
+	box-sizing: border-box;
+	color: white;
+	font-size: 4vh;
+	letter-spacing: -0.5vh;
+	background-color: #0b52a0;
+	border: none;
+	/* various browser font rotators and deselectors*/
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none;
+}
 
 .displayNone {
+	box-sizing: border-box;
 	display: none;
 }
 
@@ -75,6 +95,7 @@ blockquote, q {
 /* Portrait Classes */
 
 	.topMenuPortrait {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -83,11 +104,12 @@ blockquote, q {
 		background-color: #0b52a0;
 	}
 	.menuButtonPortrait {
+		box-sizing: border-box;
 		width: 10vh;
 		height: 10vh;
-		background-color: red;
 	}
 	.containerPortrait {
+		box-sizing: border-box;
 		position: absolute;
 		top: 10vh;
 		left: 0;
@@ -95,6 +117,7 @@ blockquote, q {
 		height: 90vh;
 	}
 	.contentPortrait {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -102,6 +125,7 @@ blockquote, q {
 		height: calc(100% - 20vh);
 	}
 	.botMenuPortrait {
+		box-sizing: border-box;
 		position: absolute;
 		top: 70vh;
 		left: 0;
@@ -110,12 +134,12 @@ blockquote, q {
 		background-color: #0b52a0;
 	}
 	.sideMenuPortrait {
+		box-sizing: border-box;
 		position: absolute;
 		top: 10vh;
 		left: -250px;/* move this to 0 */
 		width: 250px;
 		height: 90vh;
-		background-color: #0b52a0;
 	}
 	
 
@@ -123,6 +147,7 @@ blockquote, q {
 /* Landscape Classes */
 
 	.topMenuLandscape {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -131,11 +156,12 @@ blockquote, q {
 		background-color: #4b92e0;
 	}
 	.menuButtonLandscape {
+		box-sizing: border-box;
 		width: 10vh;
 		height: 10vh;
-		background-color: red;
 	}
 	.containerLandscape {
+		box-sizing: border-box;
 		position: absolute;
 		top: 10vh;
 		left: 0;
@@ -143,6 +169,7 @@ blockquote, q {
 		height: 90vh;
 	}
 	.contentLandscape {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -150,27 +177,31 @@ blockquote, q {
 		height: 100%;
 	}
 	.botMenuLandscape {
+		box-sizing: border-box;
 		display: none;
 	}
 	.sideMenuLandscape {
+		box-sizing: border-box;
 		position: absolute;
 		top: 10vh;
 		left: -250px;/* move this to 0 */
 		width: 250px;
 		height: 90vh;
-		background-color: #0b52a0;
 	}
 
 /* @media (orientation: landscape ) and (min-device-width: 800px) */
 /* Desktop classes */
 
 	.topMenuDesktop {
+		box-sizing: border-box;
 		display: none;
 	}
 	.menuButtonDesktop {
+		box-sizing: border-box;
 		display: none;
 	}
 	.containerDesktop {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 250px;
@@ -178,6 +209,7 @@ blockquote, q {
 		height: 100vh;
 	}
 	.contentLandscape {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -185,14 +217,15 @@ blockquote, q {
 		height: 100%;
 	}
 	.botMenuDesktop {
+		box-sizing: border-box;
 		display: none;
 	}
 	.sideMenuDesktop {
+		box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		left: 0;/* animate dis one */
 		width: 250px;
 		height: 100vh;
-		background-color: #0b52a0;
 	}
 
