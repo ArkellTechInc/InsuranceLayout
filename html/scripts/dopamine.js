@@ -122,7 +122,7 @@ function updateMenu(){
 	if(orientation == "Portrait"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) / 2 + "px";
 		document.getElementById("container").style.width = "100vw";
-		document.getElementById("blackBox").style.opacity = menuProgress * 0.5;
+		document.getElementById("blackBox").style.opacity = menuProgress;
 	}
 	if(orientation == "Landscape"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";

@@ -92,16 +92,14 @@ blockquote, q {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background: linear-gradient(to right, black, rgba(255,0,0,0));
 	opacity: 0;
 }
 
 .displayNone {
-	box-sizing: border-box;
 	display: none;
 }
 
-/* @media (orientation: portrait) */ 
 /* Portrait Classes */
 
 	.topMenuPortrait {
@@ -116,7 +114,7 @@ blockquote, q {
 	.menuButtonPortrait {
 		box-sizing: border-box;
 		width: 10vh;
-		height: 10vh;
+		height: calc(10vh - 1px);
 	}
 	.containerPortrait {
 		box-sizing: border-box;
@@ -151,9 +149,7 @@ blockquote, q {
 		width: 250px;
 		height: 90vh;
 	}
-	
 
-/* @media (orientation: landscape) */
 /* Landscape Classes */
 
 	.topMenuLandscape {
@@ -168,7 +164,7 @@ blockquote, q {
 	.menuButtonLandscape {
 		box-sizing: border-box;
 		width: 10vh;
-		height: 10vh;
+		height: calc(10vh - 1px);
 	}
 	.containerLandscape {
 		box-sizing: border-box;
@@ -194,12 +190,11 @@ blockquote, q {
 		box-sizing: border-box;
 		position: absolute;
 		top: 10vh;
-		left: -250px;/* move this to 0 */
+		left: -250px;
 		width: 250px;
 		height: 90vh;
 	}
 
-/* @media (orientation: landscape ) and (min-device-width: 800px) */
 /* Desktop classes */
 
 	.topMenuDesktop {
