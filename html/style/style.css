@@ -49,45 +49,15 @@ blockquote, q {
 	quotes: "" "";
 }
 /*--------------------------------------------------------------------- END OF RESET -------------------------------------------------------------------------- */
-
-#sideMenu {
+*{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	box-sizing: border-box;
-	padding: 10px;
 	color: white;
-	background-color: #0b52a0;
-}
-
-#bigolbox {
-	box-sizing: border-box;
-	position: absolute;
-	top: 5%;
-	left: 5%;
-	width: 90%;
-	height: 90%;
-	text-align: center;
-	vertical-align: middle;
-	background-color: #F8BBD0;
 	
 }
-#menuButton {
-	box-sizing: border-box;
-	color: white;
-	font-size: 4vh;
-	letter-spacing: -0.5vh;
-	background-color: #0b52a0;
-	border: none;
-	/* various browser font rotators and deselectors*/
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	-webkit-user-select: none; /* Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none;
+.displayNone {
+	display: none;
 }
-
 #blackBox {
 	position: absolute;
 	top: 0;
@@ -98,44 +68,62 @@ blockquote, q {
 	opacity: 0;
 }
 
-.displayNone {
-	display: none;
+#bigolbox {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #F8BBD0;
+	
 }
-
-/* Portrait Classes */
-
-	.topMenuPortrait {
-		box-sizing: border-box;
+/* ------------------------------------------------ Begin Responsive Design ------------------------------------------------- */
+/* Common ID styles */
+	#botMenu {
+		
+	}
+	#container {
 		position: absolute;
-		top: 0;
-		left: 0;
 		width: 100vw;
-		height: 10vh;
-		background-color: #0b52a0;
 	}
-	.menuButtonPortrait {
-		box-sizing: border-box;
-		width: 10vh;
-		height: calc(10vh - 1px);
-	}
-	.containerPortrait {
-		box-sizing: border-box;
-		position: absolute;
-		top: 10vh;
-		left: 0;
-		width: 100vw;
-		height: 90vh;
-	}
-	.contentPortrait {
-		box-sizing: border-box;
+	#content {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100% - 20vh);
 	}
+	#menuButton {
+		width: calc(10vh - 2px);
+		height: calc(10vh - 2px);
+		font-size: 4vh;
+		letter-spacing: -0.5vh;
+		background-color: #0b52a0;
+		border: none;
+		/* various browser font rotators and de-selectors*/
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		-webkit-user-select: none;      
+		-moz-user-select: none;
+		-ms-user-select: none; 
+		user-select: none;
+	}
+	
+	#sideMenu {
+		position: absolute;
+		background-color: #0b52a0;
+	}
+	#topMenu {
+		position: absolute;
+	}
+
+/* Portrait Classes */
+
 	.botMenuPortrait {
-		box-sizing: border-box;
 		position: absolute;
 		top: 70vh;
 		left: 0;
@@ -143,96 +131,85 @@ blockquote, q {
 		height: 20vh;
 		background-color: #0b52a0;
 	}
-	.sideMenuPortrait {
-		box-sizing: border-box;
-		position: absolute;
+	.containerPortrait {
 		top: 10vh;
-		left: -250px;/* move this to 0 */
+		left: 0;
+		height: 90vh;
+	}
+	.contentPortrait {
+		height: calc(100% - 20vh);
+	}
+	.menuButtonPortrait {
+	}
+	.sideMenuPortrait {
+		top: 10vh;
+		left: -250px;
 		width: 250px;
 		height: 90vh;
+	}
+	.topMenuPortrait {
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 10vh;
+		background-color: #0b52a0;
 	}
 
 /* Landscape Classes */
 
+	.botMenuLandscape {
+		display: none;
+	}
+	.containerLandscape {
+		top: 10vh;
+		left: 0;
+		height: 90vh;
+	}
+	.contentLandscape {
+		height: 100%;
+	}
+	.menuButtonLandscape {
+		
+	}
+	.sideMenuLandscape {
+		top: 10vh;
+		left: -250px;
+		width: 250px;
+		height: 90vh;
+	}
 	.topMenuLandscape {
-		box-sizing: border-box;
-		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100vw;
 		height: 10vh;
 		background-color: #4b92e0;
 	}
-	.menuButtonLandscape {
-		box-sizing: border-box;
-		width: 10vh;
-		height: calc(10vh - 1px);
-	}
-	.containerLandscape {
-		box-sizing: border-box;
-		position: absolute;
-		top: 10vh;
-		left: 0;
-		width: 100vw;
-		height: 90vh;
-	}
-	.contentLandscape {
-		box-sizing: border-box;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	.botMenuLandscape {
-		box-sizing: border-box;
-		display: none;
-	}
-	.sideMenuLandscape {
-		box-sizing: border-box;
-		position: absolute;
-		top: 10vh;
-		left: -250px;
-		width: 250px;
-		height: 90vh;
-	}
 
 /* Desktop classes */
 
-	.topMenuDesktop {
-		box-sizing: border-box;
-		display: none;
-	}
-	.menuButtonDesktop {
-		box-sizing: border-box;
+	.botMenuDesktop {
 		display: none;
 	}
 	.containerDesktop {
-		box-sizing: border-box;
-		position: absolute;
 		top: 0;
 		left: 250px;
-		width: 100vw;
 		height: 100vh;
 	}
 	.contentLandscape {
-		box-sizing: border-box;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
 		height: 100%;
 	}
-	.botMenuDesktop {
-		box-sizing: border-box;
+	.menuButtonDesktop {
 		display: none;
 	}
 	.sideMenuDesktop {
-		box-sizing: border-box;
-		position: absolute;
 		top: 0;
-		left: 0;/* animate dis one */
+		left: 0;
 		width: 250px;
 		height: 100vh;
 	}
+	.topMenuDesktop {
+		display: none;
+	}
+	
+/* ------------------------------------------------ End Responsive Design ------------------------------------------------- */
 
