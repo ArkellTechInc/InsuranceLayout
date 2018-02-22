@@ -5,8 +5,9 @@ var menuVisible;
 
 //Animation variables
 var menuAnimation = 0; //Means no menuAnimation currently playing
-var menuPosition = -250;
-var menuPositionTarget = -250;
+var menuProgress = 0; //Number from 0 to 1, 0 means menu closed, 1 means menu open
+var menuTarget = 0;
+var menuWidth = 250;
 
 //---------------------------------------------------- Media query handling
 
@@ -30,6 +31,8 @@ function desktopUpdate(desktopQuery) {
 
 portraitUpdate(portraitQuery); // Call update functions once at run time
 desktopUpdate(desktopQuery);
+menuProgress = menuTarget; //Prevent animation from running on load
+
 portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
 desktopQuery.addListener(desktopUpdate);
 
@@ -88,7 +91,7 @@ function toggleMenu() {
 function showMenu() {
 	menuVisible = true;
 	
-	menuPositionTarget = 0;
+	menuTarget = 1;
 	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
 	menuAnimation = setInterval(updateMenu, 15);
 }
@@ -96,7 +99,7 @@ function showMenu() {
 function hideMenu() {
 	menuVisible = false;
 	
-	menuPositionTarget = -250;
+	menuTarget = 0;
 	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
 	menuAnimation = setInterval(updateMenu, 15);
 }
@@ -104,29 +107,32 @@ function hideMenu() {
 function updateMenu(){
 	//Math.do()
 	
-	if (Math.abs(menuPosition - menuPositionTarget) < 1) { //Close enough to target, snap to target and stop animation
-		menuPosition = menuPositionTarget;
+	if (Math.abs(menuProgress - menuTarget) < 0.005) { //Close enough to target, snap to target and stop animation
+		menuProgress = menuTarget;
 		clearInterval(menuAnimation);
 		menuAnimation = 0;
 	} else {
-		menuPosition = (menuPosition * 9 + menuPositionTarget) / 10; //Smooth animate function 
+		menuProgress = (menuProgress * 9 + menuTarget) / 10; //Smooth animate function 
 	}
 	
-	//Update CSS based on menuPosition and other variables
+	//Update CSS based on menuProgress and other variables
 	
-	document.getElementById("sideMenu").style.left = menuPosition + 'px'; 
+	document.getElementById("sideMenu").style.left = -menuWidth + menuProgress * menuWidth + 'px'; 
 	
 	if(orientation == "Portrait"){
-		document.getElementById("container").style.left	 = (menuPosition + 250) / 2 + "px";
+		document.getElementById("container").style.left	 = (menuProgress * menuWidth) / 2 + "px";
 		document.getElementById("container").style.width = "100vw";
+		document.getElementById("blackBox").style.opacity = menuProgress * 0.5;
 	}
 	if(orientation == "Landscape"){
-		document.getElementById("container").style.left	 = (menuPosition + 250) + "px";
-		document.getElementById("container").style.width = "calc(100vw - " + (menuPosition + 250) + "px)";
+		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
+		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
+		document.getElementById("blackBox").style.opacity = 0;
 	}
 	if(orientation == "Desktop"){
-		document.getElementById("container").style.left	 = (menuPosition + 250) + "px";
-		document.getElementById("container").style.width = "calc(100vw - " + (menuPosition + 250) + "px)";
+		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
+		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
+		document.getElementById("blackBox").style.opacity = 0;
 	}
 	
 }
