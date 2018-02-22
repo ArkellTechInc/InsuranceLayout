@@ -1,11 +1,7 @@
-
-
 //Id names of elements that will be affected by orientation changes
 var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content"];
 
 var menuVisible;
-var menuShowing = false;
-var menuHiding = false;
 
 //Animation variables
 var menuAnimation = 0; //Means no menuAnimation currently playing
@@ -26,16 +22,16 @@ function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
 	switchLayout();
 }
+
 function desktopUpdate(desktopQuery) {
 	desktopBool = desktopQuery.matches;
 	switchLayout();
 }
+
 portraitUpdate(portraitQuery); // Call update functions once at run time
 desktopUpdate(desktopQuery);
 portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
 desktopQuery.addListener(desktopUpdate);
-
-
 
 function switchLayout(){
 	//Determines layout to switch to based on portraitBool and desktopBool, then switches to it
@@ -92,18 +88,17 @@ function toggleMenu() {
 function showMenu() {
 	menuVisible = true;
 	
-    menuPositionTarget = 0;
-	clearInterval(menuAnimation);
-    menuAnimation = setInterval(updateMenu, 15);
-	
+	menuPositionTarget = 0;
+	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
+	menuAnimation = setInterval(updateMenu, 15);
 }
 
 function hideMenu() {
 	menuVisible = false;
 	
-    menuPositionTarget = -250;
-	clearInterval(menuAnimation);
-    menuAnimation = setInterval(updateMenu, 15);
+	menuPositionTarget = -250;
+	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
+	menuAnimation = setInterval(updateMenu, 15);
 }
 
 function updateMenu(){
