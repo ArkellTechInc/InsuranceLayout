@@ -14,7 +14,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-weight: inherit;
 	font-style: inherit;
 	font-size: 100%;
-	font-family: inherit;
 	vertical-align: baseline;
 	overflow: hidden;
 }
@@ -52,10 +51,15 @@ blockquote, q {
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	box-sizing: border-box;
 	color: white;
-	
 }
 .displayNone {
 	display: none;
+}
+.selected {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.subMenu {
+	text-indent: 30px;
 }
 #blackBox {
 	position: absolute;
@@ -76,8 +80,31 @@ blockquote, q {
 	text-align: center;
 	vertical-align: middle;
 	background-color: #F8BBD0;
-	
 }
+#dropDownArrow {
+	display: inline-block;
+	width: 0; 
+	height: 0;
+	padding-bottom: 2px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid white;
+}
+#sideMenu {
+	display: table;
+}
+#sideMenu ul {
+	display: table-cell;
+}
+#sideMenu ul li {
+	display: block;
+	vertical-align: middle;
+	padding: 20px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+	
 /* ------------------------------------------------ Begin Responsive Design ------------------------------------------------- */
 /* Common ID styles */
 	#botMenu {
@@ -181,7 +208,7 @@ blockquote, q {
 		left: 0;
 		width: 100vw;
 		height: 10vh;
-		background-color: #4b92e0;
+		background-color: #0b52a0;
 	}
 
 /* Desktop classes */
