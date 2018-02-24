@@ -7,7 +7,7 @@ var menuVisible;
 var menuAnimation = 0; //Means no menuAnimation currently playing
 var menuProgress = 0; //Number from 0 to 1, 0 means menu closed, 1 means menu open
 var menuTarget = 0;
-var menuWidth = 250;
+var menuWidth = 300;
 
 //---------------------------------------------------- Media query handling
 

@@ -60,6 +60,7 @@ blockquote, q {
 }
 .subMenu {
 	text-indent: 30px;
+	font-weight: lighter;
 }
 #blackBox {
 	position: absolute;
@@ -90,6 +91,10 @@ blockquote, q {
 	border-right: 6px solid transparent;
 	border-top: 6px solid white;
 }
+#lemons {
+	display: inline;
+	color: #fdc43e;
+}
 #sideMenu {
 	display: table;
 }
@@ -100,9 +105,9 @@ blockquote, q {
 	display: block;
 	vertical-align: middle;
 	padding: 20px;
-	font-size: 17px;
+	font-size: 19px;
 	letter-spacing: 1px;
-	font-weight: lighter;
+	font-weight: regular;
 }
 	
 /* ------------------------------------------------ Begin Responsive Design ------------------------------------------------- */
@@ -121,8 +126,10 @@ blockquote, q {
 		width: 100%;
 	}
 	#menuButton {
-		width: calc(10vh - 2px);
-		height: calc(10vh - 2px);
+		float: left;
+		display: block;
+		width: calc(10vh);
+		height: calc(10vh);
 		font-size: 4vh;
 		letter-spacing: -0.5vh;
 		background-color: #0b52a0;
@@ -138,13 +145,27 @@ blockquote, q {
 		-ms-user-select: none; 
 		user-select: none;
 	}
-	
+	#phoneIcon {
+		float: right;
+		display: block;
+		width: calc(10vh);
+		height: calc(10vh);
+		background-color: blue;
+		border: none;
+	}
 	#sideMenu {
 		position: absolute;
 		background-color: #0b52a0;
 	}
+	#title {
+		background-color: #0b52a0;
+		border: none;
+		font-size: 5vw;
+		width: 60%;
+	}
 	#topMenu {
 		position: absolute;
+		line-height: 10vh;
 	}
 
 /* Portrait Classes */
@@ -169,8 +190,8 @@ blockquote, q {
 	}
 	.sideMenuPortrait {
 		top: 10vh;
-		left: -250px;
-		width: 250px;
+		left: -300px;
+		width: 300px;
 		height: 90vh;
 	}
 	.topMenuPortrait {
@@ -199,8 +220,8 @@ blockquote, q {
 	}
 	.sideMenuLandscape {
 		top: 10vh;
-		left: -250px;
-		width: 250px;
+		left: -300px;
+		width: 300px;
 		height: 90vh;
 	}
 	.topMenuLandscape {
@@ -218,7 +239,7 @@ blockquote, q {
 	}
 	.containerDesktop {
 		top: 0;
-		left: 250px;
+		left: 300px;
 		height: 100vh;
 	}
 	.contentDesktop {
@@ -230,7 +251,7 @@ blockquote, q {
 	.sideMenuDesktop {
 		top: 0;
 		left: 0;
-		width: 250px;
+		width: 300px;
 		height: 100vh;
 	}
 	.topMenuDesktop {
