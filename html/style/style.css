@@ -126,10 +126,13 @@ blockquote, q {
 		width: 100%;
 	}
 	#menuButton {
+		position: relative;
+		z-index: 10;
 		float: left;
 		display: block;
 		width: calc(10vh);
 		height: calc(10vh);
+		min-height: 44px;
 		font-size: 4vh;
 		letter-spacing: -0.5vh;
 		background-color: #0b52a0;
@@ -146,11 +149,15 @@ blockquote, q {
 		user-select: none;
 	}
 	#phoneIcon {
+		position: relative;
+		z-index: 10;
 		float: right;
-		display: block;
+		display: inline-block;
 		width: calc(10vh);
 		height: calc(10vh);
-		background-color: blue;
+		min-width: 44px;
+		min-height: 44px;
+		background-color: #0b52a0;
 		border: none;
 	}
 	#sideMenu {
@@ -161,11 +168,18 @@ blockquote, q {
 		background-color: #0b52a0;
 		border: none;
 		font-size: 5vw;
-		width: 60%;
+		text-align: center;
 	}
 	#topMenu {
 		position: absolute;
 		line-height: 10vh;
+	}
+	#topTitle {
+		position: relative;
+		line-height: 10vh;
+		width: 100%;
+		text-align: center;
+		background-color: #0b52a0;
 	}
 
 /* Portrait Classes */
@@ -255,6 +269,9 @@ blockquote, q {
 		height: 100vh;
 	}
 	.topMenuDesktop {
+		display: none;
+	}
+	.topTitleDesktop {
 		display: none;
 	}
 	
