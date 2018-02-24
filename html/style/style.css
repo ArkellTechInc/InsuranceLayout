@@ -52,8 +52,21 @@ blockquote, q {
 	box-sizing: border-box;
 	color: white;
 }
+h1 {
+	color: black;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 10px 0px 20px 0px;
+}
 .displayNone {
 	display: none;
+}
+.hLine {
+	width: 100%;
+	border-bottom: 1px solid black;
+	line-height: 5px;
+	margin-bottom: 15px;
+	/* do a line */
 }
 .selected {
 	background-color: rgba(255, 255, 255, 0.2);
@@ -61,6 +74,12 @@ blockquote, q {
 .subMenu {
 	text-indent: 30px;
 	font-weight: lighter;
+}
+.text2 {
+	text-align: left;
+	text-indent: 32px;
+	line-height: 20px;
+	color: black;
 }
 #blackBox {
 	position: absolute;
@@ -80,7 +99,8 @@ blockquote, q {
 	height: 90%;
 	text-align: center;
 	vertical-align: middle;
-	background-color: #F8BBD0;
+	color: black;
+
 }
 #dropDownArrow {
 	display: inline-block;
