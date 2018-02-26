@@ -207,9 +207,23 @@ blockquote, q {
 		background-color: #0b52a0;
 		border: none;
 	}
+	#phoneIcon img {
+		width: 8vmin;
+		height: 8vmin;
+	}
 	#sideMenu {
 		position: absolute;
 		background-color: #0b52a0;
+	}
+	#sideMenuPhone {
+		background-color: rgba(0, 0, 0, 0.3);
+		font-weight: bold;
+		text-align: center;
+	}
+	#sideMenuTitle {
+		background-color: rgba(0, 0, 0, 0.3);
+		font-weight: bold;
+		text-align: center;
 	}
 	#title {
 		background-color: #0b52a0;
@@ -259,6 +273,12 @@ blockquote, q {
 		width: 300px;
 		height: 90vh;
 	}
+	.sideMenuPhonePortrait {
+		display: none !important;
+	}
+	.sideMenuTitlePortrait {
+		display: none !important;
+	}
 	.topMenuPortrait {
 		top: 0;
 		left: 0;
@@ -270,7 +290,7 @@ blockquote, q {
 /* Landscape Classes */
 
 	.botMenuLandscape {
-		display: none;
+		display: none !important;
 	}
 	.containerLandscape {
 		top: 10vh;
@@ -294,6 +314,12 @@ blockquote, q {
 		width: 300px;
 		height: 90vh;
 	}
+	.sideMenuPhoneLandscape {
+		display: none !important;
+	}
+	.sideMenuTitleLandscape {
+		display: none !important;
+	}
 	.topMenuLandscape {
 		top: 0;
 		left: 0;
@@ -305,7 +331,7 @@ blockquote, q {
 /* Desktop classes */
 
 	.botMenuDesktop {
-		display: none;
+		display: none !important;
 	}
 	.containerDesktop {
 		top: 0;
@@ -316,7 +342,7 @@ blockquote, q {
 		height: 100%;
 	}
 	.menuButtonDesktop {
-		display: none;
+		display: none !important;
 	}
 	.pageTitleDesktop {
 		font-size: 48px;
@@ -332,11 +358,19 @@ blockquote, q {
 		width: 300px;
 		height: 100vh;
 	}
+	.sideMenuPhoneDesktop {
+		font-size: 14px !important;
+		line-height: 0px !important;
+	}
+	.sideMenuTitleDesktop {
+		font-size: 22px !important;
+		line-height: 22px !important;
+	}
 	.topMenuDesktop {
-		display: none;
+		display: none !important;
 	}
 	.topTitleDesktop {
-		display: none;
+		display: none !important;
 	}
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
