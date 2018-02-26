@@ -16,6 +16,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	vertical-align: baseline;
 	overflow: hidden;
+	text-decoration: none;
 }
 section, article, aside, header, footer, nav, dialog, figure {
 	display:block;
@@ -51,6 +52,9 @@ blockquote, q {
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	box-sizing: border-box;
 	color: white;
+}
+li:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 .displayNone {
 	display: none;
@@ -216,7 +220,7 @@ blockquote, q {
 		background-color: #0b52a0;
 	}
 	#sideMenuPhone {
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: #0b52a0;
 		font-weight: bold;
 		text-align: center;
 	}
@@ -359,12 +363,19 @@ blockquote, q {
 		height: 100vh;
 	}
 	.sideMenuPhoneDesktop {
-		font-size: 14px !important;
-		line-height: 0px !important;
+		font-weight: normal !important;
+		letter-spacing: 3px !important;
+		font-size: 22px !important;
+		line-height: 22px !important;
+		padding: 20px 0 10px 0 !important;
+	}
+	.sideMenuPhoneDesktop a {
+		/*pointer-events: none;*/
 	}
 	.sideMenuTitleDesktop {
 		font-size: 22px !important;
-		line-height: 22px !important;
+		line-height: 60px !important;
+		padding: 0px !important;
 	}
 	.topMenuDesktop {
 		display: none !important;
