@@ -47,7 +47,7 @@ function switchLayout(){
 			currentOrientation = "Desktop";
 		}
 	}
-	
+
 	switchOrientation(currentOrientation);
 	pageStyleUpdate();
 }
@@ -147,29 +147,34 @@ function pageStyleUpdate() {
 		case "Portrait":  //portrait mode usees pagination
 			for (i = 0; i < totalPages; i++) {
 				if (i != (currentPage-1)) {
-					pages[i].disabled=true;
+					hidePage(i+1);
 				}				
 			}
 			break;
 		case "Landscape": //landscape mode uses pagination
 			for (i = 0; i < totalPages; i++) {
 				if (i != (currentPage-1)) {
-					pages[i].disabled=true;
+					hidePage(i+1);
 				}
 			}
 			break;
 		case "Desktop":   //desktop mode uses page scrolling
-			for (i = 0; i < totalPages; i++) {
-					pages[i].disabled=false;
-			}
+			/*for (i = 0; i < totalPages; i++) {
+				pages[i].disabled=false;
+			}*/
 			break;
 	}
 	
 }
 
+function hidePage(pageIndex) {
+	console.log('#'+pageIndex);
+	$('#'+pageIndex).hide();
+}
+
 //add a jquery mousedown event to page elements
 $(".page").mousedown(function(){
-
+	
 });
 
 //add a jquery mouseup event to page elements
