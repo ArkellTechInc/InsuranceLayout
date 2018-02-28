@@ -134,6 +134,8 @@ function updateMenu(){
 }
 
 // -- Pagination Functions ------------------------------------------------
+var totalPages = document.getElementsByClassName("page").length;
+var currentPage;
 
 //switches between pagination and scrolling page styles depending on orientation
 function pageStyleUpdate() {
@@ -152,10 +154,13 @@ function pageStyleUpdate() {
 	
 }
 
-//add a jquery click event to page elements
-$(".page").click();
+//add a jquery mousedown event to page elements
+$(".page").mousedown(function(){
 
-function onPageDrag() {
+});
 
-}
+//add a jquery mouseup event to page elements
+$(".page").mouseup(function(){
+
+});
 
