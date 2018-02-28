@@ -47,7 +47,9 @@ function switchLayout(){
 			currentOrientation = "Desktop";
 		}
 	}
+	
 	switchOrientation(currentOrientation);
+	pageStyleUpdate();
 }
 
 
@@ -134,21 +136,32 @@ function updateMenu(){
 }
 
 // -- Pagination Functions ------------------------------------------------
+var pages = document.getElementsByClassName("page");
 var totalPages = document.getElementsByClassName("page").length;
-var currentPage;
+var currentPage = 1;
 
 //switches between pagination and scrolling page styles depending on orientation
 function pageStyleUpdate() {
 
 	switch (currentOrientation) {
 		case "Portrait":  //portrait mode usees pagination
-			hideMenu();
+			for (i = 0; i < totalPages; i++) {
+				if (i != (currentPage-1)) {
+					pages[i].disabled=true;
+				}				
+			}
 			break;
 		case "Landscape": //landscape mode uses pagination
-			hideMenu();
+			for (i = 0; i < totalPages; i++) {
+				if (i != (currentPage-1)) {
+					pages[i].disabled=true;
+				}
+			}
 			break;
 		case "Desktop":   //desktop mode uses page scrolling
-			showMenu();
+			for (i = 0; i < totalPages; i++) {
+					pages[i].disabled=false;
+			}
 			break;
 	}
 	
