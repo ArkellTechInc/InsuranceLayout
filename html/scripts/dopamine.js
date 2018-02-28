@@ -105,7 +105,6 @@ function hideMenu() {
 }
 
 function updateMenu(){
-	//Math.do()
 	
 	if (Math.abs(menuProgress - menuTarget) < 0.005) { //Close enough to target, snap to target and stop animation
 		menuProgress = menuTarget;
@@ -134,5 +133,5 @@ function updateMenu(){
 		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
 		document.getElementById("blackBox").style.opacity = 0;
 	}
-	
+
 }
