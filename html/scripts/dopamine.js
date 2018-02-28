@@ -9,7 +9,7 @@ var menuProgress = 0; //Number from 0 to 1, 0 means menu closed, 1 means menu op
 var menuTarget = 0;
 var menuWidth = 300;
 
-//---------------------------------------------------- Media query handling
+//-- Media query handling -------------------------------------------------
 
 var portraitBool = true;
 var desktopBool = false;
@@ -29,9 +29,9 @@ function desktopUpdate(desktopQuery) {
 	switchLayout();
 }
 
-portraitUpdate(portraitQuery); // Call update functions once at run time
+portraitUpdate(portraitQuery);             // Call update functions once at run time
 desktopUpdate(desktopQuery);
-menuProgress = menuTarget; //Prevent animation from running on load
+menuProgress = menuTarget;                 //Prevent animation from running on load
 
 portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
 desktopQuery.addListener(desktopUpdate);
@@ -75,10 +75,7 @@ function switchOrientation(mode) {
 	}
 }
 
-
-
-// ---------------------------------------------------- Menu Functions
-
+// -- Menu Functions ------------------------------------------------------
 
 function toggleMenu() {
 	if(menuVisible){
@@ -135,3 +132,30 @@ function updateMenu(){
 	}
 
 }
+
+// -- Pagination Functions ------------------------------------------------
+
+//switches between pagination and scrolling page styles depending on orientation
+function pageStyleUpdate() {
+
+	switch (currentOrientation) {
+		case "Portrait":  //portrait mode usees pagination
+			hideMenu();
+			break;
+		case "Landscape": //landscape mode uses pagination
+			hideMenu();
+			break;
+		case "Desktop":   //desktop mode uses page scrolling
+			showMenu();
+			break;
+	}
+	
+}
+
+//add a jquery click event to page elements
+$(".page").click();
+
+function onPageDrag() {
+
+}
+
