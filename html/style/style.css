@@ -77,11 +77,11 @@ body {
 	padding: 10px;
 }
 .icons {
+	height: 100%;
 }
 .icons img{
-	padding-top: 10px;
 	width: 40%;
-	height: 40%;
+	margin: 4vmin auto 0 auto;
 }
 .lemons {
 	display: inline;
@@ -174,8 +174,10 @@ body {
 		background-color: #0b52a0;
 	}
 	#botSubTitle {
-		font-size: 2vh;
+		font-size: 1.8vh;
 		line-height: 2vh;
+		width: 90%;
+		margin: 0 auto 0 auto;
 	}
 	#botTitle {
 		
@@ -203,14 +205,14 @@ body {
 		position: relative;
 		clear: both;
 		display: inline-block;
-		background-color: #71B8FF;
+		background-color: #3E85D3;
 		width: 28vmin;
 		height: 28vmin;
 	}
 	#trafficTicketsBox {
 		position: relative;
 		display: inline-block;
-		background-color: #A4EBFF;
+		background-color: #0b52a0;
 		width: 28vmin;
 		height: 28vmin;
 	}
@@ -320,7 +322,7 @@ body {
 	.menuButtonPortrait {
 	}
 	.pageTitlePortrait {
-		font-size: 10vw;
+		font-size: 8vmin;
 		line-height: 10vw;
 		width: 70vw;
 		margin: 2vh auto 0 auto;
@@ -364,8 +366,8 @@ body {
 		
 	}
 	.pageTitleLandscape {
-		font-size: 6vw;
-		line-height: 7vw;
+		font-size: 8vh;
+		line-height: 8vh;
 		
 	}
 	.sideMenuLandscape {
