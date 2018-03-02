@@ -1,5 +1,5 @@
 //Id names of elements that will be affected by orientation changes
-var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content", "topTitle", "pageTitle", "sideMenuTitle", "sideMenuPhone", "blackBox", "boxContainer"];
+var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content", "topTitle", "sideMenuTitle", "sideMenuPhone", "blackBox", "boxContainer"];
 
 var menuVisible;
 
@@ -16,7 +16,7 @@ var desktopBool = false;
 var currentOrientation = "Portrait";
 
 var portraitQuery = window.matchMedia("(orientation: portrait)");
-var desktopQuery = window.matchMedia("(min-device-width: 800px)");
+var desktopQuery = window.matchMedia("(min-device-width: 1000px)");
 
 //Update functions set the bools that can be accessed at any time
 function portraitUpdate(portraitQuery) {
@@ -144,7 +144,7 @@ var currentPage = 1;
 function pageStyleUpdate() {
 
 	switch (currentOrientation) {
-		case "Portrait":  //portrait mode usees pagination
+		case "Portrait":  //portrait mode uses pagination
 			for (i = 0; i < totalPages; i++) {
 				if (i != (currentPage-1)) {
 					hidePage(i+1);

@@ -89,22 +89,34 @@ body {
 	width: 30%;
 	border-bottom: 2px solid #0b52a0;
 	line-height: 1vh;
-	margin: 0 auto 3vh auto;
+	margin: 3vh auto 3vh auto;
 	/* do a line */
+}
+.iconBox {
+	position: relative;
+	display: inline-block;
+	width: 25vmin;
+	height: 25vmin;
 }
 .iconLabel {
 	position: absolute;
-	font-size: 5vmin;
+	font-size: 3vmin;
 	width: 100%;
 	bottom: 0;
-	padding: 10px;
+	padding: 2vmin;
 }
 .icons {
-	height: 100%;
+	width: 25vmin;
+	height: 25vmin;
+	object-fit: contain;
 }
 .icons img{
-	width: 40%;
-	margin: 4vmin auto 0 auto;
+	display: block;
+	margin: 2.5vmin auto 0 auto;
+	vertical-align: middle;
+	width: 15vmin;
+	height: 15vmin;
+	
 }
 .infoBoxLine {
 	display: inline-block;
@@ -141,7 +153,8 @@ body {
 .infoBoxHighlight {
 	color: #666;
 	font-weight: bold;
-	font-size: 4vmin;
+	font-size: 3vmin;
+	line-height: 3.5vmin;
 	letter-spacing: 0.1vmin;
 	padding: 2vh 3vw 2vh 3vw;
 	border-radius: 2vmin;
@@ -151,7 +164,7 @@ body {
 	text-align: center;
 	color: white;
 	font-weight: bold;
-	font-size: 4vmin;
+	font-size: 3vmin;
 	letter-spacing: 0.1vmin;
 	padding: 1.5vh 3vw 1.5vh 3vw;
 	border-radius: 1vmin;
@@ -172,7 +185,7 @@ body {
 }
 .pageTitle {
 	color: #999;
-	font-size: 6vmin;
+	font-size: 5vmin;
 	font-weight: bold;
 }
 .phoneBox {
@@ -185,7 +198,7 @@ body {
 	border-radius: 1vmin;
 	background-color: #fdc43e;
 	width: 90%;
-	margin: 4vh auto 2vh auto;
+	margin: 2vh auto 2vh auto;
 	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
 }
 .phoneBox a {
@@ -233,7 +246,7 @@ body {
 }
 #boxContainer {
 	width: 100%;
-	margin: 0 auto 2vh auto;
+	margin: 0 auto 0 auto;
 }
 #botMenu {
 	
@@ -263,18 +276,14 @@ body {
 }
 #botTitle {
 	
-	font-size: 4vw;
+	font-size: 3vh;
 	border: 2px solid white;
 	width: 20vw;
 	padding: 1vh 1vh 1.5vh 1vh;
 	margin: 2vh auto 2vh auto;
 }
 #carelessDrivingBox {
-	position: relative;
-	display: inline-block;
 	background-color: #0b52a0;
-	width: 28vmin;
-	height: 28vmin;
 }
 
 #container {
@@ -297,11 +306,7 @@ body {
 	border-top: 6px solid white;
 }
 #impairedDrivingBox {
-	position: relative;
-	display: inline-block;
 	background-color: #3E85D3;
-	width: 28vmin;
-	height: 28vmin;
 }
 #menuButton {
 	position: relative;
@@ -325,10 +330,6 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none; 
 	user-select: none;
-}
-#pageTitle {
-	color: #1c252b;
-	padding: 0 0vw 4vh 0vw;
 }
 #phoneIcon {
 	position: relative;
@@ -356,10 +357,11 @@ body {
 }
 #sideMenu ul li {
 	display: block;
+	padding-left: 20px;
 	vertical-align: middle;
-	padding: 20px;
-	font-size: 19px;
-	letter-spacing: 1px;
+	line-height: 7vh;
+	font-size: 5vw;
+	letter-spacing: 0.1vmin;
 	font-weight: regular;
 }
 #sideMenuPhone {
@@ -373,12 +375,8 @@ body {
 	text-align: center;
 }
 #streetRacingBox {
-	position: relative;
 	clear: both;
-	display: inline-block;
 	background-color: #3E85D3;
-	width: 28vmin;
-	height: 28vmin;
 }
 #title {
 	background-color: #0b52a0;
@@ -398,11 +396,7 @@ body {
 	background-color: #0b52a0;
 }
 #trafficTicketsBox {
-	position: relative;
-	display: inline-block;
 	background-color: #0b52a0;
-	width: 28vmin;
-	height: 28vmin;
 }
 
 /* ---------------------------Portrait Classes-------------------------------- */
@@ -426,10 +420,7 @@ body {
 	.menuButtonPortrait {
 	}
 	.pageTitlePortrait {
-		font-size: 8vmin;
-		line-height: 10vw;
-		width: 70vw;
-		margin: 2vh auto 0 auto;
+
 	}
 	.sideMenuPortrait {
 		top: 10vh;
@@ -470,8 +461,6 @@ body {
 		
 	}
 	.pageTitleLandscape {
-		font-size: 8vh;
-		line-height: 8vh;
 		
 	}
 	.sideMenuLandscape {
@@ -479,6 +468,10 @@ body {
 		left: -300px;
 		width: 300px;
 		height: 90vh;
+	}
+	.sideMenuLandscape ul li {
+		font-size: 2.5vw !important;
+		line-height: 9vh !important;
 	}
 	.sideMenuPhoneLandscape {
 		display: none !important;
@@ -513,18 +506,15 @@ body {
 		display: none !important;
 	}
 	.pageTitleDesktop {
-		font-size: 48px;
-		width: 50vw;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: left;
-		line-height: 60px;
 	}
 	.sideMenuDesktop {
 		top: 0;
 		left: 0;
 		width: 300px;
 		height: 100vh;
+	}
+	.sideMenuDesktop ul li {
+		font-size: 22px !important;
 	}
 	.sideMenuPhoneDesktop {
 		font-weight: normal !important;
@@ -564,9 +554,16 @@ body {
 		margin-right: auto;
 	}
 }
-@media screen and (min-width: 600px) and (orientation: portrait) {
-	#pageTitle {
-		font-size: 6vh;
-		line-height: 6vh;
+@media screen and (min-width: 450px) and (orientation: portrait) {
+	.sideMenuPortrait ul li {
+		font-size: 3vw !important;
+	}
+}
+@media (min-aspect-ratio: 3/4) {
+	.botMenuPortrait {
+		display: none !important;
+	}
+	.contentPortrait {
+		height: 100%;
 	}
 }
