@@ -57,11 +57,34 @@ li:hover {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 body {
-	background-color: #FEFEFE;
+	background-color: #FDFDFF;
 }
+.didYouKnowBox {
+	display: inline-block;
+	float: right;
+	margin: 4vh 0 0 0;
+	padding: 3vh 0 0 4vw;
+	text-align: left;
+	width: 40%;
+}
+.didYouKnow {
+	color: #555;
+	font-weight: bold;
+	font-size: 5vmin;
+	letter-spacing: 0.2vmin;
+	margin: 0 0 2vh 0;
+}
+.didYouKnowBox ul li {
+	color: #0b52a0;
+	line-height: 5vh;
+	font-weight: bold;
+	font-size: 3.5vmin;
+}
+
 .displayNone {
 	display: none;
 }
+
 .hLine {
 	width: 30%;
 	border-bottom: 2px solid #0b52a0;
@@ -83,9 +106,90 @@ body {
 	width: 40%;
 	margin: 4vmin auto 0 auto;
 }
+.infoBoxLine {
+	display: inline-block;
+	float: left;
+	margin: 2vh 0 2vh 0;
+	width: 60%;
+	border-right: 1px solid #EEE;
+	padding: 0 0 0 0;
+}
+.infoBox {
+	width: 90%;
+	margin: 2vh 0 2vh 0;
+	padding: 3vh 3vw 3vh 3vw;
+	border: 1px solid #EEE;
+	border-radius: 0.5vmin;
+	text-align: left;
+	background-color: white;
+}
+.infoBoxContent {
+	color: #555;
+	font-weight: regular;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 2vh 0 2vh 0;
+}
+.infoBoxFooter {
+	color: #0b52a0;
+	text-align: center;
+	font-weight: regular;
+	font-size: 3vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1vh 0 1vh 0;
+}
+.infoBoxHighlight {
+	color: #666;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 2vh 3vw 2vh 3vw;
+	border-radius: 2vmin;
+	background-color: #D7FFFF;
+}
+.infoBoxLink {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #029eb6;
+	width: 80%;
+	margin: 2vh auto 2vh auto;
+	box-shadow: 0.1vmin 0.1vmin 0.1vmin #AAA;
+}
+.infoBoxTitle {
+	color: #555;
+	font-weight: bold;
+	font-size: 5vmin;
+	letter-spacing: 0.2vmin;
+}
 .lemons {
 	display: inline;
 	color: #fdc43e !important;
+}
+.pageTitle {
+	color: #999;
+	font-size: 6vmin;
+	font-weight: bold;
+}
+.phoneBox {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #fdc43e;
+	width: 90%;
+	margin: 4vh auto 2vh auto;
+	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+}
+.phoneBox a {
+	color: inherit;
 }
 .selected {
 	background-color: rgba(255, 255, 255, 0.2);
@@ -102,17 +206,11 @@ body {
 	line-height: 5vw;
 	color: #1c252b;
 }
-#blackBox {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to right, black, rgba(255,0,0,0));
-	opacity: 0;
+.underline {
+	color: inherit;
+	text-decoration: underline;
 }
-
+/* ------------------------------------------------ Common ID styles ------------------------------------------------- */
 #bigolbox {
 	position: absolute;
 	top: 5%;
@@ -123,6 +221,72 @@ body {
 	vertical-align: middle;
 	color: black;
 }
+#blackBox {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, black, rgba(255,0,0,0));
+	opacity: 0;
+}
+#boxContainer {
+	width: 100%;
+	margin: 0 auto 2vh auto;
+}
+#botMenu {
+	
+}
+#botLeft {
+	position: relative;
+	float: left;
+	display: inline;
+	text-align: center;
+	width: 30vw;
+	height: 20vh;
+	color: white;
+}
+#botRight {
+	position: relative;
+	float: right;
+	display: inline;
+	width: 70vw;
+	height: 20vh;
+	background-color: #0b52a0;
+}
+#botSubTitle {
+	font-size: 1.8vh;
+	line-height: 2vh;
+	width: 90%;
+	margin: 0 auto 0 auto;
+}
+#botTitle {
+	
+	font-size: 4vw;
+	border: 2px solid white;
+	width: 20vw;
+	padding: 1vh 1vh 1.5vh 1vh;
+	margin: 2vh auto 2vh auto;
+}
+#carelessDrivingBox {
+	position: relative;
+	display: inline-block;
+	background-color: #0b52a0;
+	width: 28vmin;
+	height: 28vmin;
+}
+
+#container {
+	position: absolute;
+	width: 100vw;
+}
+#content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
 #dropDownArrow {
 	display: inline-block;
 	width: 0; 
@@ -132,8 +296,60 @@ body {
 	border-right: 6px solid transparent;
 	border-top: 6px solid white;
 }
+#impairedDrivingBox {
+	position: relative;
+	display: inline-block;
+	background-color: #3E85D3;
+	width: 28vmin;
+	height: 28vmin;
+}
+#menuButton {
+	position: relative;
+	z-index: 10;
+	float: left;
+	display: block;
+	width: calc(10vh);
+	height: calc(10vh);
+	min-height: 44px;
+	font-size: 4vh;
+	letter-spacing: -0.5vh;
+	background-color: #0b52a0;
+	border: none;
+	/* various browser font rotators and de-selectors*/
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	-webkit-user-select: none;      
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	user-select: none;
+}
+#pageTitle {
+	color: #1c252b;
+	padding: 0 0vw 4vh 0vw;
+}
+#phoneIcon {
+	position: relative;
+	z-index: 10;
+	float: right;
+	display: inline-block;
+	width: calc(10vh);
+	height: calc(10vh);
+	min-width: 44px;
+	min-height: 44px;
+	background-color: #0b52a0;
+	border: none;
+}
+#phoneIcon img {
+	width: 8vmin;
+	height: 8vmin;
+}
 #sideMenu {
+	position: absolute;
 	display: table;
+	background-color: #0b52a0;
 }
 #sideMenu ul {
 	display: table-cell;
@@ -146,162 +362,50 @@ body {
 	letter-spacing: 1px;
 	font-weight: regular;
 }
-	
-/* ------------------------------------------------ Begin Responsive Design ------------------------------------------------- */
-/* Common ID styles */
-	#boxContainer {
-		width: 100%;
-		margin: 0 auto 2vh auto;
-	}
-	#botMenu {
-		
-	}
-	#botLeft {
-		position: relative;
-		float: left;
-		display: inline;
-		text-align: center;
-		width: 30vw;
-		height: 20vh;
-		color: white;
-	}
-	#botRight {
-		position: relative;
-		float: right;
-		display: inline;
-		width: 70vw;
-		height: 20vh;
-		background-color: #0b52a0;
-	}
-	#botSubTitle {
-		font-size: 1.8vh;
-		line-height: 2vh;
-		width: 90%;
-		margin: 0 auto 0 auto;
-	}
-	#botTitle {
-		
-		font-size: 4vw;
-		border: 2px solid white;
-		width: 20vw;
-		padding: 1vh 1vh 1.5vh 1vh;
-		margin: 2vh auto 2vh auto;
-	}
-	#carelessDrivingBox {
-		position: relative;
-		display: inline-block;
-		background-color: #0b52a0;
-		width: 28vmin;
-		height: 28vmin;
-	}
-	#impairedDrivingBox {
-		position: relative;
-		display: inline-block;
-		background-color: #3E85D3;
-		width: 28vmin;
-		height: 28vmin;
-	}
-	#streetRacingBox {
-		position: relative;
-		clear: both;
-		display: inline-block;
-		background-color: #3E85D3;
-		width: 28vmin;
-		height: 28vmin;
-	}
-	#trafficTicketsBox {
-		position: relative;
-		display: inline-block;
-		background-color: #0b52a0;
-		width: 28vmin;
-		height: 28vmin;
-	}
-	#container {
-		position: absolute;
-		width: 100vw;
-	}
-	#content {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
-	#menuButton {
-		position: relative;
-		z-index: 10;
-		float: left;
-		display: block;
-		width: calc(10vh);
-		height: calc(10vh);
-		min-height: 44px;
-		font-size: 4vh;
-		letter-spacing: -0.5vh;
-		background-color: #0b52a0;
-		border: none;
-		/* various browser font rotators and de-selectors*/
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-		-webkit-user-select: none;      
-		-moz-user-select: none;
-		-ms-user-select: none; 
-		user-select: none;
-	}
-	#pageTitle {
-		color: #1c252b;
-		padding: 0 0vw 4vh 0vw;
-	}
-	#phoneIcon {
-		position: relative;
-		z-index: 10;
-		float: right;
-		display: inline-block;
-		width: calc(10vh);
-		height: calc(10vh);
-		min-width: 44px;
-		min-height: 44px;
-		background-color: #0b52a0;
-		border: none;
-	}
-	#phoneIcon img {
-		width: 8vmin;
-		height: 8vmin;
-	}
-	#sideMenu {
-		position: absolute;
-		background-color: #0b52a0;
-	}
-	#sideMenuPhone {
-		background-color: #0b52a0;
-		font-weight: bold;
-		text-align: center;
-	}
-	#sideMenuTitle {
-		background-color: rgba(0, 0, 0, 0.3);
-		font-weight: bold;
-		text-align: center;
-	}
-	#title {
-		background-color: #0b52a0;
-		border: none;
-		font-size: 5vw;
-		text-align: center;
-	}
-	#topMenu {
-		position: absolute;
-		line-height: 10vh;
-	}
-	#topTitle {
-		position: relative;
-		line-height: 10vh;
-		width: 100%;
-		text-align: center;
-		background-color: #0b52a0;
-	}
+#sideMenuPhone {
+	background-color: #0b52a0;
+	font-weight: bold;
+	text-align: center;
+}
+#sideMenuTitle {
+	background-color: rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-align: center;
+}
+#streetRacingBox {
+	position: relative;
+	clear: both;
+	display: inline-block;
+	background-color: #3E85D3;
+	width: 28vmin;
+	height: 28vmin;
+}
+#title {
+	background-color: #0b52a0;
+	border: none;
+	font-size: 5vw;
+	text-align: center;
+}
+#topMenu {
+	position: absolute;
+	line-height: 10vh;
+}
+#topTitle {
+	position: relative;
+	line-height: 10vh;
+	width: 100%;
+	text-align: center;
+	background-color: #0b52a0;
+}
+#trafficTicketsBox {
+	position: relative;
+	display: inline-block;
+	background-color: #0b52a0;
+	width: 28vmin;
+	height: 28vmin;
+}
 
-/* Portrait Classes */
+/* ---------------------------Portrait Classes-------------------------------- */
 	
 	.botMenuPortrait {
 		position: absolute;
@@ -347,7 +451,7 @@ body {
 		background-color: #0b52a0;
 	}
 
-/* Landscape Classes */
+/* ----------------------------------------Landscape Classes ------------------------------------------*/
 	.blackBoxLandscape {
 		display: none;
 	}
@@ -390,7 +494,7 @@ body {
 		background-color: #0b52a0;
 	}
 
-/* Desktop classes */
+/* -------------------------------------Desktop classes --------------------------------------*/
 	.blackBoxDesktop {
 		display: none;
 	}
