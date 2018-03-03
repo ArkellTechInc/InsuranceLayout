@@ -139,6 +139,8 @@ function updateMenu(){
 var pages = document.getElementsByClassName("page");
 var totalPages = document.getElementsByClassName("page").length;
 var currentPage = 1;
+var mouseX;
+var mouseY;
 
 //switches between pagination and scrolling page styles depending on orientation
 function pageStyleUpdate() {
@@ -159,26 +161,39 @@ function pageStyleUpdate() {
 			}
 			break;
 		case "Desktop":   //desktop mode uses page scrolling
-			/*for (i = 0; i < totalPages; i++) {
-				pages[i].disabled=false;
-			}*/
+			for (i = 0; i < totalPages; i++) {
+				showPage(i+1);
+			}
 			break;
 	}
 	
 }
 
 function hidePage(pageIndex) {
-	console.log('#'+pageIndex);
 	$('#'+pageIndex).hide();
 }
 
+function showPage(pageIndex) {
+	$('#'+pageIndex).show();
+}
+
 //add a jquery mousedown event to page elements
-$(".page").mousedown(function(){
-	
+$(".page").mousedown(function(e){
+	mouseX = e.clientX;
 });
 
 //add a jquery mouseup event to page elements
-$(".page").mouseup(function(){
-
+$(".page").mouseup(function(e){
+	var diff = e.clientX;
+	diff = diff - mouseX;
+	if (diff < -100) {
+		console.log("page turn right");
+		currentPage++;
+		pageStyleUpdate();
+	} else if (diff > 100) {
+		console.log("page turn left");
+		currentPage--;
+		pageStyleUpdate();
+	}
 });
 
