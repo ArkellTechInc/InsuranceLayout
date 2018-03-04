@@ -12,11 +12,9 @@ var menuWidth = 300;
 //-- Media query handling -------------------------------------------------
 
 var portraitBool = true;
-var desktopBool = false;
 var currentOrientation = "Portrait";
 
 var portraitQuery = window.matchMedia("(orientation: portrait)");
-var desktopQuery = window.matchMedia("(min-device-width: 1000px)");
 
 //Update functions set the bools that can be accessed at any time
 function portraitUpdate(portraitQuery) {
@@ -24,28 +22,18 @@ function portraitUpdate(portraitQuery) {
 	switchLayout();
 }
 
-function desktopUpdate(desktopQuery) {
-	desktopBool = desktopQuery.matches;
-	switchLayout();
-}
 
 portraitUpdate(portraitQuery);             // Call update functions once at run time
-desktopUpdate(desktopQuery);
 menuProgress = menuTarget;                 //Prevent animation from running on load
 
 portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
-desktopQuery.addListener(desktopUpdate);
 
 function switchLayout(){
-	//Determines layout to switch to based on portraitBool and desktopBool, then switches to it
+	//Determines layout to switch to based on portraitBool, then switches to it
 	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
 	} else {
-		if (!desktopBool) { //Landscape iPad mode
-			currentOrientation = "Landscape";
-		} else { 			//Desktop mode
-			currentOrientation = "Desktop";
-		}
+		currentOrientation = "Landscape";
 	}
 
 	switchOrientation(currentOrientation);
@@ -54,7 +42,7 @@ function switchLayout(){
 
 
 function switchOrientation(mode) {
-	//mode must be "Portrait", "Landscape", or "Desktop"
+	//mode must be "Portrait" or "Landscape"
 	//Switch classes
 	for (i = 0; i < elements.length; i++){
 		var divElement = document.getElementById(elements[i]); //Get id by name
@@ -67,10 +55,6 @@ function switchOrientation(mode) {
 			//Other responsive anim tings go here
 			break;
 		case "Landscape":
-			hideMenu();
-			//Other responsive anim tings go here
-			break;
-		case "Desktop":
 			showMenu();
 			//Other responsive anim tings go here
 			break;
@@ -117,34 +101,56 @@ function updateMenu(){
 	
 	document.getElementById("sideMenu").style.left = -menuWidth + menuProgress * menuWidth + 'px'; 
 	
+	if (menuProgress == 0){
+		$("#blackBox").css("pointer-events","none");
+	} else {
+		$("#blackBox").css("pointer-events","auto");
+	}
+	
 	if(currentOrientation == "Portrait"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) / 2 + "px";
 		document.getElementById("container").style.width = "100vw";
 		document.getElementById("blackBox").style.opacity = menuProgress;
+		
 	}
 	if(currentOrientation == "Landscape"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
 		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
-		document.getElementById("blackBox").style.opacity = 0;
-	}
-	if(currentOrientation == "Desktop"){
-		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
-		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
-		document.getElementById("blackBox").style.opacity = 0;
+		$("#blackBox").css("opacity",0);
+		$("#blackBox").css("pointer-events","none");
 	}
 
 }
 
+
 // -- Pagination Functions ------------------------------------------------
-var pages = document.getElementsByClassName("page");
+//var pages = document.getElementsByClassName("page");
 var totalPages = document.getElementsByClassName("page").length;
 var currentPage = 1;
 var mouseX;
 var mouseY;
 
+$(document).ready(function(){
+	pageStyleUpdate();
+});
+$(window).resize(function(){
+	pageStyleUpdate();
+});
+
 //switches between pagination and scrolling page styles depending on orientation
 function pageStyleUpdate() {
-
+	
+	switch (currentOrientation) {
+		case "Portrait":
+			for (i = 0; i < totalPages; i++) {
+				$("#"+i).css("left", 100 * (i-1) /*+ (page offset var goes here)*/ + "vw");
+			}
+			break;
+		case "Landscape":
+			$("#"+i).css("left", 0);
+			break;
+	}
+	/*
 	switch (currentOrientation) {
 		case "Portrait":  //portrait mode uses pagination
 			for (i = 0; i < totalPages; i++) {
@@ -153,20 +159,13 @@ function pageStyleUpdate() {
 				}				
 			}
 			break;
-		case "Landscape": //landscape mode uses pagination
-			for (i = 0; i < totalPages; i++) {
-				if (i != (currentPage-1)) {
-					hidePage(i+1);
-				}
-			}
-			break;
-		case "Desktop":   //desktop mode uses page scrolling
+		case "Landscape":   //landscape mode uses page scrolling
 			for (i = 0; i < totalPages; i++) {
 				showPage(i+1);
 			}
 			break;
 	}
-	
+	*/
 }
 
 function hidePage(pageIndex) {
@@ -178,14 +177,17 @@ function showPage(pageIndex) {
 }
 
 //add a jquery mousedown event to page elements
-$(".page").mousedown(function(e){
+$(document).mousedown(function(e){
+	e.preventDefault();
 	mouseX = e.clientX;
 });
 
 //add a jquery mouseup event to page elements
 $(".page").mouseup(function(e){
+	
 	var diff = e.clientX;
 	diff = diff - mouseX;
+	
 	if (diff < -100) {
 		console.log("page turn right");
 		currentPage++;

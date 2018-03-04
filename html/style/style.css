@@ -183,6 +183,10 @@ body {
 	display: inline;
 	color: #fdc43e !important;
 }
+.page {
+	position: absolute;
+	width: 100vw;
+}
 .pageTitle {
 	color: #999;
 	font-size: 5vmin;
@@ -235,7 +239,6 @@ body {
 	color: black;
 }
 #blackBox {
-	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -295,6 +298,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
+	text-align: center;
 }
 #dropDownArrow {
 	display: inline-block;
@@ -442,7 +446,7 @@ body {
 		background-color: #0b52a0;
 	}
 
-/* ----------------------------------------Landscape Classes ------------------------------------------*/
+/* -------------------------------------Landscape classes --------------------------------------*/
 	.blackBoxLandscape {
 		display: none;
 	}
@@ -450,91 +454,46 @@ body {
 		display: none !important;
 	}
 	.containerLandscape {
-		top: 10vh;
-		left: 0;
-		height: 90vh;
+		top: 0;
+		left: 300px;
+		height: 100vh;
 	}
 	.contentLandscape {
 		height: 100%;
 	}
 	.menuButtonLandscape {
-		
+		display: none !important;
 	}
 	.pageTitleLandscape {
-		
 	}
 	.sideMenuLandscape {
-		top: 10vh;
-		left: -300px;
+		top: 0;
+		left: 0;
 		width: 300px;
-		height: 90vh;
+		height: 100vh;
 	}
 	.sideMenuLandscape ul li {
-		font-size: 2.5vw !important;
-		line-height: 9vh !important;
-	}
-	.sideMenuPhoneLandscape {
-		display: none !important;
-	}
-	.sideMenuTitleLandscape {
-		display: none !important;
-	}
-	.topMenuLandscape {
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 10vh;
-		background-color: #0b52a0;
-	}
-
-/* -------------------------------------Desktop classes --------------------------------------*/
-	.blackBoxDesktop {
-		display: none;
-	}
-	.botMenuDesktop {
-		display: none !important;
-	}
-	.containerDesktop {
-		top: 0;
-		left: 300px;
-		height: 100vh;
-	}
-	.contentDesktop {
-		height: 100%;
-	}
-	.menuButtonDesktop {
-		display: none !important;
-	}
-	.pageTitleDesktop {
-	}
-	.sideMenuDesktop {
-		top: 0;
-		left: 0;
-		width: 300px;
-		height: 100vh;
-	}
-	.sideMenuDesktop ul li {
 		font-size: 22px !important;
 	}
-	.sideMenuPhoneDesktop {
+	.sideMenuPhoneLandscape {
 		font-weight: normal !important;
 		letter-spacing: 3px !important;
 		font-size: 22px !important;
 		line-height: 22px !important;
 		padding: 20px 0 10px 0 !important;
 	}
-	.sideMenuPhoneDesktop a {
+	.sideMenuPhoneLandscape a {
 		/*pointer-events: none;*/
 	}
-	.sideMenuTitleDesktop {
+	.sideMenuTitleLandscape {
 		font-size: 22px !important;
 		line-height: 60px !important;
 		padding: 0px !important;
 	}
-	.topMenuDesktop {
+	.topMenuLandscape {
 		display: none !important;
 	}
-	.topTitleDesktop {
+	.topTitleLandscape {
 		display: none !important;
 	}
 	
