@@ -59,6 +59,52 @@ li:hover {
 body {
 	background-color: #FDFDFF;
 }
+.addressButton {
+	padding: 2vh 0 0 0;
+	float: right;
+	color: #333;
+	font-weight: 100;
+	font-size: 3.5vmin;
+	font-style: italic;
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+}
+.addressButton img {
+	width: 11vmin;
+	height: 11vmin;
+}
+.addressText {
+	float: left;
+	padding: 4vh 0 0 0;
+	display: inline-block;
+	color: inherit;
+	width: 60%;
+}
+.alignLeft {
+	text-align: left;
+	text-indent: 5vmin;
+}
+
+.callBackBox {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #029eb6;
+	width: 90%;
+	margin: 2vh auto 2vh auto;
+	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+}
+.contentContainer {
+	border-top: 1px solid #CCC;
+	width: 92%;
+	margin: 0 auto 0 auto;
+	padding: 2vh 0 0 0;
+}
 .didYouKnowBox {
 	display: inline-block;
 	float: right;
@@ -84,13 +130,41 @@ body {
 .displayNone {
 	display: none;
 }
-
+.emailIcon {
+	display: inline-block;
+	margin: 0 2vmin 0 2vmin;
+}
+.emailIcon img {
+	width: 5vmin;
+	height: 5vmin;
+}
+.extIcon {
+	margin: 0 2vmin 0 2vmin;
+	display: inline-block;
+}
+.extIcon img {
+	width: 5vmin;
+	height: 5vmin;
+}
 .hLine {
 	width: 30%;
 	border-bottom: 2px solid #0b52a0;
 	line-height: 1vh;
 	margin: 3vh auto 3vh auto;
 	/* do a line */
+}
+.hoursBox {
+	color: #666;
+	font-weight: bold;
+	font-size: 3vmin;
+	line-height: 3.5vmin;
+	letter-spacing: 0.1vmin;
+	padding: 2vh 3vw 2vh 3vw;
+	border-radius: 2vmin;
+	background-color: #FFFFBD;
+	margin: 2vh auto 2vh auto;
+	width: 80%;
+	text-align: center;
 }
 .iconBox {
 	position: relative;
@@ -128,12 +202,19 @@ body {
 }
 .infoBox {
 	width: 90%;
+	height: 100%;
 	margin: 2vh 0 2vh 0;
 	padding: 3vh 3vw 3vh 3vw;
 	border: 1px solid #EEE;
 	border-radius: 0.5vmin;
 	text-align: left;
 	background-color: white;
+}
+.infoBoxAddress {
+	color: #555;
+	font-weight: bold;
+	font-size: 3.5vmin;
+	line-height: 3.5vmin;
 }
 .infoBoxContent {
 	color: #555;
@@ -179,6 +260,12 @@ body {
 	font-size: 5vmin;
 	letter-spacing: 0.2vmin;
 }
+.leftContainer {
+	display: inline-block;
+	float: left;
+	width: 40%;
+	border-right: 1px solid #CCC;
+}
 .lemons {
 	display: inline;
 	color: #fdc43e !important;
@@ -187,10 +274,17 @@ body {
 	position: absolute;
 	width: 100vw;
 }
+.pageSubTitle {
+	color: #999;
+	font-size: 4vmin;
+	font-weight: bold;
+	text-align: left;
+}
 .pageTitle {
 	color: #999;
 	font-size: 5vmin;
 	font-weight: bold;
+	margin-top: 2vh;
 }
 .phoneBox {
 	text-align: center;
@@ -208,8 +302,25 @@ body {
 .phoneBox a {
 	color: inherit;
 }
+.rightContainer {
+	display: inline-block;
+	float: right;
+	width: 60%;
+	padding: 0 0 0 4vmin;
+	height: 100%;
+}
 .selected {
 	background-color: rgba(255, 255, 255, 0.2);
+}
+.staffMember {
+	border-top: 1px solid #CCC;
+	padding-top: 1vh;
+	margin: 1vh auto 0 auto;
+	width: 90%;
+	color: #333;
+	font-size: 3.5vmin;
+	font-weight: bold;
+	line-height: 5vmin;
 }
 .subMenu {
 	text-indent: 30px;
@@ -311,6 +422,10 @@ body {
 }
 #impairedDrivingBox {
 	background-color: #3E85D3;
+}
+#map {
+	width: 40vmin;
+	height: 40vmin;
 }
 #menuButton {
 	position: relative;
