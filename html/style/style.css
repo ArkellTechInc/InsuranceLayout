@@ -290,7 +290,7 @@ body {
 }
 .page {
 	position: absolute;
-	width: 100vw;
+	width: inherit;
 }
 .pageSubTitle {
 	color: #999;
