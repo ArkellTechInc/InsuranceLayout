@@ -71,8 +71,8 @@ body {
 	text-align: center;
 }
 .addressButton img {
-	width: 11vmin;
-	height: 11vmin;
+	width: 8vmin;
+	height: 8vmin;
 }
 .addressText {
 	float: left;
@@ -105,6 +105,9 @@ body {
 	margin: 0 auto 0 auto;
 	padding: 2vh 0 0 0;
 }
+.darker {
+	color: #333 !important;
+}
 .didYouKnowBox {
 	display: inline-block;
 	float: right;
@@ -114,7 +117,7 @@ body {
 	width: 40%;
 }
 .didYouKnow {
-	color: #555;
+	color: #555 !important;
 	font-weight: bold;
 	font-size: 5vmin;
 	letter-spacing: 0.2vmin;
@@ -146,6 +149,16 @@ body {
 	width: 5vmin;
 	height: 5vmin;
 }
+.fullListing {
+	display: inline-block;
+	line-height: 4vmin !important;
+	vertical-align: middle;
+}
+.fullListing img {
+	vertical-align: top;
+	width: 4vmin !important;
+	height: 4vmin !important;
+}
 .hLine {
 	width: 30%;
 	border-bottom: 2px solid #0b52a0;
@@ -158,7 +171,7 @@ body {
 	font-weight: bold;
 	font-size: 3vmin;
 	line-height: 3.5vmin;
-	letter-spacing: 0.1vmin;
+	letter-spacing: 0.2vmin;
 	padding: 2vh 3vw 2vh 3vw;
 	border-radius: 2vmin;
 	background-color: #FFFFBD;
@@ -259,6 +272,11 @@ body {
 	font-weight: bold;
 	font-size: 5vmin;
 	letter-spacing: 0.2vmin;
+}
+.jobTitle {
+	color: #333;
+	font-weight: 100;
+	padding: 0 0 0.5vh 0;
 }
 .leftContainer {
 	display: inline-block;
