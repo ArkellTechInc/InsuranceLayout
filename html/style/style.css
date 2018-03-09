@@ -60,13 +60,12 @@ body {
 	background-color: #FDFDFF;
 }
 .addressButton {
-	padding: 2vh 0 0 0;
+	display: inline-block;
 	float: right;
 	color: #333;
 	font-weight: 100;
 	font-size: 3.5vmin;
 	font-style: italic;
-	display: inline-block;
 	width: 40%;
 	text-align: center;
 }
@@ -76,7 +75,6 @@ body {
 }
 .addressText {
 	float: left;
-	padding: 4vh 0 0 0;
 	display: inline-block;
 	color: inherit;
 	width: 60%;
@@ -159,6 +157,9 @@ body {
 	width: 4vmin !important;
 	height: 4vmin !important;
 }
+.halfOpacity {
+	opacity: 0.2;
+}
 .hLine {
 	width: 30%;
 	border-bottom: 2px solid #0b52a0;
@@ -185,6 +186,10 @@ body {
 	width: 25vmin;
 	height: 25vmin;
 }
+.iconBoxBig {
+	width: 50vmin;
+	height: 50vmin;
+}
 .iconLabel {
 	position: absolute;
 	font-size: 3vmin;
@@ -192,10 +197,21 @@ body {
 	bottom: 0;
 	padding: 2vmin;
 }
+.iconLabelBig {
+	position: absolute;
+	font-size: 6vmin;
+	width: 100%;
+	bottom: 0;
+	padding: 2vmin 2vmin 4vmin 2vmin;
+}
 .icons {
 	width: 25vmin;
 	height: 25vmin;
 	object-fit: contain;
+}
+.iconsBig {
+	width: 50min;
+	height: 50vmin;
 }
 .icons img{
 	display: block;
@@ -204,6 +220,12 @@ body {
 	width: 15vmin;
 	height: 15vmin;
 	
+}
+.iconsBig img{
+	margin-top: 5vmin;
+	margin-left: 10vmin;
+	width: 30vmin;
+	height: 30vmin;
 }
 .infoBoxLine {
 	display: inline-block;
@@ -216,7 +238,7 @@ body {
 .infoBox {
 	width: 90%;
 	height: 100%;
-	margin: 2vh 0 2vh 0;
+	margin: 2vh auto 2vh auto;
 	padding: 3vh 3vw 3vh 3vw;
 	border: 1px solid #EEE;
 	border-radius: 0.5vmin;
@@ -224,10 +246,11 @@ body {
 	background-color: white;
 }
 .infoBoxAddress {
+	display: inline-block;
 	color: #555;
 	font-weight: bold;
-	font-size: 3.5vmin;
-	line-height: 3.5vmin;
+	font-size: 3vmin;
+	line-height: 3vmin;
 }
 .infoBoxContent {
 	color: #555;
@@ -432,6 +455,11 @@ body {
 	padding: 1vh 1vh 1.5vh 1vh;
 	margin: 2vh auto 2vh auto;
 }
+#caption {
+	height: 25vh;
+	font-style: italic;
+	text-align: center;
+}
 #carelessDrivingBox {
 	background-color: #0b52a0;
 }
@@ -462,8 +490,8 @@ body {
 	background-color: #3E85D3;
 }
 #map {
-	width: 40vmin;
-	height: 40vmin;
+	width: 100%;
+	height: 100%;
 }
 #menuButton {
 	position: relative;
@@ -555,6 +583,11 @@ body {
 }
 #trafficTicketsBox {
 	background-color: #0b52a0;
+}
+#vid {
+	margin-top: 5vh;
+	width: 80vmin;
+	height: 45vmin;
 }
 
 /* ---------------------------Portrait Classes-------------------------------- */
