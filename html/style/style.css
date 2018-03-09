@@ -15,7 +15,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-style: inherit;
 	font-size: 100%;
 	vertical-align: baseline;
-	overflow: hidden;
 	text-decoration: none;
 }
 section, article, aside, header, footer, nav, dialog, figure {
@@ -28,6 +27,7 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -291,6 +291,7 @@ body {
 .page {
 	position: absolute;
 	width: inherit;
+	height: 100%;
 }
 .pageSubTitle {
 	color: #999;
@@ -344,6 +345,22 @@ body {
 	text-indent: 30px;
 	font-weight: lighter;
 }
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	
+	
+	text-align: center;
+}
+.swiper-scrollbar {
+	height: 20vh;
+}
+.swiper-slide {
+	color:black;
+}
+.swiper-wrapper {
+	
+}
 .text2 {
 	text-align: left;
 	font-size: 5vw;
@@ -375,6 +392,7 @@ body {
 	height: 100%;
 	background: linear-gradient(to right, black, rgba(255,0,0,0));
 	opacity: 0;
+	z-index: 11;
 }
 #boxContainer {
 	width: 100%;
@@ -420,14 +438,16 @@ body {
 
 #container {
 	position: absolute;
-	width: 100vw;
+	width: inherit;
+	
 }
 #content {
-	position: absolute;
+	
 	top: 0;
 	left: 0;
 	width: 100%;
 	text-align: center;
+	
 }
 #dropDownArrow {
 	display: inline-block;
@@ -488,6 +508,7 @@ body {
 	position: absolute;
 	display: table;
 	background-color: #0b52a0;
+	z-index: 20;
 }
 #sideMenu ul {
 	display: table-cell;

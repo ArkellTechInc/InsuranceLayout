@@ -1,6 +1,7 @@
 //Id names of elements that will be affected by orientation changes
 var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content", "topTitle", "sideMenuTitle", "sideMenuPhone", "blackBox", "boxContainer"];
 
+var mySwiper = undefined;
 var menuVisible;
 
 //Animation variables
@@ -9,24 +10,42 @@ var menuProgress = 0; //Number from 0 to 1, 0 means menu closed, 1 means menu op
 var menuTarget = 0;
 var menuWidth = 300;
 
+
 //-- Media query handling -------------------------------------------------
 
 var portraitBool = true;
 var currentOrientation = "Portrait";
-
 var portraitQuery = window.matchMedia("(orientation: portrait)");
 
-//Update functions set the bools that can be accessed at any time
+//-- Document is ready :0 ---------------
+$(document).ready(function(){
+	portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
+	portraitUpdate(portraitQuery);             // Call update functions once at run time
+	updateMenu(); 
+	menuProgress = menuTarget;                 //Prevent animation from running if site is loaded on desktop
+	
+	 //Initialize Swiper
+		mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		direction: 'horizontal',
+		resistanceRatio: 0.5,
+		
+		// If we need pagination
+		pagination: {
+		  el: '.swiper-pagination',
+		},
+		
+
+	});
+
+});
+
+
 function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
 	switchLayout();
 }
 
-
-portraitUpdate(portraitQuery);             // Call update functions once at run time
-menuProgress = menuTarget;                 //Prevent animation from running on load
-
-portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
 
 function switchLayout(){
 	//Determines layout to switch to based on portraitBool, then switches to it
@@ -37,7 +56,6 @@ function switchLayout(){
 	}
 
 	switchOrientation(currentOrientation);
-	pageStyleUpdate();
 }
 
 
@@ -45,8 +63,14 @@ function switchOrientation(mode) {
 	//mode must be "Portrait" or "Landscape"
 	//Switch classes
 	for (i = 0; i < elements.length; i++){
-		var divElement = document.getElementById(elements[i]); //Get id by name
-		divElement.className = elements[i] + mode; //Set corresponding class by concatenating the name with mode
+		if ($("#" + elements[i]).length > 0){
+			console.log("heeaih" + elements[i] + " SEEMS TO EXIST XD");
+			$("#" + elements[i]).removeClass();
+			$("#" + elements[i]).addClass(elements[i] + mode);//Set corresponding class by concatenating the name with mode
+		} else {
+			console.log(elements[i] + " doesn't exist");
+		}
+
 	}
 	
 	switch (mode) {
@@ -59,7 +83,9 @@ function switchOrientation(mode) {
 			//Other responsive anim tings go here
 			break;
 	}
+	
 }
+
 
 // -- Menu Functions ------------------------------------------------------
 
@@ -99,103 +125,46 @@ function updateMenu(){
 	
 	//Update CSS based on menuProgress and other variables
 	
-	document.getElementById("sideMenu").style.left = -menuWidth + menuProgress * menuWidth + 'px'; 
+	$("#sideMenu").css("left", -menuWidth + menuProgress * menuWidth + 'px'); 
 	
-	if (menuProgress == 0){
-		$("#blackBox").css("pointer-events","none");
-	} else {
+	if (menuProgress > 0.5){
 		$("#blackBox").css("pointer-events","auto");
+	} else {
+		$("#blackBox").css("pointer-events","none");
 	}
 	
+	
 	if(currentOrientation == "Portrait"){
-		document.getElementById("container").style.left	 = (menuProgress * menuWidth) / 2 + "px";
-		document.getElementById("container").style.width = "100vw";
-		document.getElementById("blackBox").style.opacity = menuProgress;
+		
+		$("#container").css("left", (menuProgress * menuWidth) / 2 + "px");
+		$("#container").css("width", 100 + "vw");
+		$("#blackBox").css("opacity",menuProgress);
 		
 	}
 	if(currentOrientation == "Landscape"){
-		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
-		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
+		$("#container").css("left", (menuProgress * menuWidth) + "px");
+		$("#container").css("width", "calc(100vw - " + (menuProgress * menuWidth) + "px)");
 		$("#blackBox").css("opacity",0);
 		$("#blackBox").css("pointer-events","none");
 	}
-
+	
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
 }
 
 
 // -- Pagination Functions ------------------------------------------------
-//var pages = document.getElementsByClassName("page");
-var totalPages = document.getElementsByClassName("page").length;
-var currentPage = 1;
-var mouseX;
-var mouseY;
 
-$(document).ready(function(){
-	pageStyleUpdate();
-});
-$(window).resize(function(){
-	pageStyleUpdate();
-});
 
 //switches between pagination and scrolling page styles depending on orientation
 function pageStyleUpdate() {
-	
 	switch (currentOrientation) {
 		case "Portrait":
-			for (i = 0; i < totalPages; i++) {
-				$("#"+i).css("left", 100 * (i-1) /*+ (page offset var goes here)*/ + "vw");
-			}
+		
 			break;
 		case "Landscape":
-			$("#"+i).css("left", 0);
+		
 			break;
 	}
-	/*
-	switch (currentOrientation) {
-		case "Portrait":  //portrait mode uses pagination
-			for (i = 0; i < totalPages; i++) {
-				if (i != (currentPage-1)) {
-					hidePage(i+1);
-				}				
-			}
-			break;
-		case "Landscape":   //landscape mode uses page scrolling
-			for (i = 0; i < totalPages; i++) {
-				showPage(i+1);
-			}
-			break;
-	}
-	*/
 }
-
-function hidePage(pageIndex) {
-	$('#'+pageIndex).hide();
-}
-
-function showPage(pageIndex) {
-	$('#'+pageIndex).show();
-}
-
-//add a jquery mousedown event to page elements
-$(document).mousedown(function(e){
-	e.preventDefault();
-	mouseX = e.clientX;
-});
-
-//add a jquery mouseup event to page elements
-$(".page").mouseup(function(e){
-	
-	var diff = e.clientX;
-	diff = diff - mouseX;
-	
-	if (diff < -100) {
-		console.log("page turn right");
-		currentPage++;
-		pageStyleUpdate();
-	} else if (diff > 100) {
-		console.log("page turn left");
-		currentPage--;
-		pageStyleUpdate();
-	}
-});
-
