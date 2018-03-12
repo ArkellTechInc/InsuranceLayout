@@ -23,61 +23,71 @@
 						<!-- Slides -->
 						
 						<!-- Page 1 --------------------------------------->
-						<div id="page1" class="displayNone swiper-slide">
-						<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
-					<div class="callBackBox">Click Here to Get Started</div>
-					<div class="contentContainer">
-						<div class="leftContainer">
-							<div class="pageSubTitle">Hours of Operation</div>
-							<div class="hoursBox">Monday - Friday<br />9:00 - 5:00</div>
-							<div class="pageSubTitle">Staff Directory</div>
-							
-							<div class="staffMember">Vincent Pronesti</div>
-							<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
-							
-							<div class="staffMember">Steve Henderson</div>
-							<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
-							
-							<div class="staffMember">Tad Baran</div>
-							<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
-							
-							<div class="infoBoxFooter">See full staff directory</div>
-						
-						</div>
-						<div class="rightContainer">
-							<h1 class="pageSubTitle">Youngs Insurance Brokers Inc.</h1>
-							<div class="infoBox">
-								<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.843747187956!2d-79.83995288421269!3d43.31753027913429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9ddda6036c23%3A0xb244b969a76ed2aa!2s444+Plains+Rd+E%2C+Burlington%2C+ON+L7T+2E1!5e0!3m2!1sen!2sca!4v1520203849035" frameborder="0" style="border:0" allowfullscreen></iframe>
-								<div class="infoBoxAddress">
-								<div class="addressText">444 Plains Rd E<br />Burlington, ON<br />L7T 2E1</div>
-								<a href="https://goo.gl/maps/EkMD2k7Uga92" target="_blank"><div class="addressButton"><img src="icons/dirIcon.svg" alt="Get Directions Icon"><br />Get Directions</div></a>
+						<div id="page1" class="swiper-slide">
+							<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
+							<div class="callBackBox">Click Here to Get Started</div>
+							<div class="contentContainer">
+								<div class="leftContainer">
+									<div class="pageSubTitle">Hours of Operation</div>
+									<div class="hoursBox">Monday - Friday<br />9:00 - 5:00</div>
+									<div class="pageSubTitle">Staff Directory</div>
+									<div class="staffMember">Vincent Pronesti</div>
+									<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
+									<div class="staffMember">Steve Henderson</div>
+									<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
+									<div class="staffMember">Tad Baran</div>
+									<div class="emailIcon"><img src="icons/emailIcon.svg" alt="Email Icon"></div><div class="extIcon"><img src="icons/extIcon.svg" alt="Phone Icon"></div>
+									<div class="infoBoxFooter">See full staff directory</div>
+								</div>
+								<div class="rightContainer">
+									<h1 class="pageSubTitle">Youngs Insurance Brokers Inc.</h1>
+									<div class="infoBox">
+										<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.843747187956!2d-79.83995288421269!3d43.31753027913429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9ddda6036c23%3A0xb244b969a76ed2aa!2s444+Plains+Rd+E%2C+Burlington%2C+ON+L7T+2E1!5e0!3m2!1sen!2sca!4v1520203849035" frameborder="0" style="border:0" allowfullscreen></iframe>
+										<div class="infoBoxAddress">
+										<div class="addressText">444 Plains Rd E<br />Burlington, ON<br />L7T 2E1</div>
+										<a href="https://goo.gl/maps/EkMD2k7Uga92" target="_blank"><div class="addressButton"><img src="icons/dirIcon.svg" alt="Get Directions Icon"><br />Get Directions</div></a>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					
-					
-					
-					
-					</div>
-				
 						</div>
 						
 						<!-- Page 2 --------------------------------------->
 						<div id="page2" class="swiper-slide">
 							<h1 class="pageTitle darker">Get Your Free Insurance Quote</h1>
-							<div class="formBox">
+							<div class="formBox" name="" action="" method="">
 								<label>Interested In</label>
-								<select class="floatRight">
+								<select class="floatRight" name="interestedIn" form="contactForm">
 									<option>High Risk Driver's Recovery Program</option>
 									<option>General Information</option>
 									<option>Call Back</option>
 								</select>
 							</div>
-							<div class="formBox">
-								<label>Name</label>
-								<input></input>
-
-							</div>
+							<form id="contactForm">
+								<div class="formBox">
+									<label>Name*</label>
+									<input type="text" placeholder="Tiffany" name="" required></input>
+								</div>
+								<div class="formBox">
+									<label>Phone*</label>
+									<input type="tel" placeholder="905-123-4567" name="" required></input>
+								</div>
+								<div class="formBox">
+									<label>Email*</label>
+									<input type="email" placeholder="tiffany@arkelltech.com" name="" required></input>
+								</div>
+								<div class="formBox">
+									<label>Subject Line</label>
+									<input type="text" placeholder="I need a quote" name=""></input>
+								</div>
+								<div class="formBox">
+									<label>Additional Info</label>
+									<textarea form="contactForm" rows="3" placeholder="Please call me back ASAP." name=""></textarea>
+								</div>
+								<div class="formBox">
+									<button type="submit">Submit</button>
+								</div>
+							</form>
 						</div>
 						
 						<!-- Page 3 --------------------------------------->
@@ -128,11 +138,12 @@
 					</div>
 					
 					<!-- Pagination buttons -->
-					<div class="swiper-pagination"></div>
+				<div class="swiper-pagination"></div>
 					
-				</div>
+			</div>
 			<!----------------------- content ends here ----------------------->
 		</div>
+	
 		
 		
 		<div id="botMenu" class="botMenuPortrait">

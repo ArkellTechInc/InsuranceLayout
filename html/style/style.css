@@ -151,6 +151,13 @@ body {
 	margin: 4vh 0;
 	line-height: 3.5vh;
 }
+.formBox button {
+	background-color: white;
+	float: none !important;
+	margin: 2vh auto !important;
+	width: 50% !important;
+	text-align: center !important;
+}
 .formBox label {
 	display: inline-block;
 	color: #AAA;
@@ -158,7 +165,10 @@ body {
 	width: 30%;
 	text-align: right;
 }
-.formBox select,.formBox input {
+.formBox input {
+	padding: 2px 4px;
+}
+.formBox button,.formBox select,.formBox input,.formBox textarea {
 	float: right;
 	font-size: inherit;
 	color: #333;
