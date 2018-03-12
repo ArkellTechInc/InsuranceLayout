@@ -148,19 +148,22 @@ body {
 	height: 5vmin;
 }
 .formBox {
-	margin: 2vh 0;
+	margin: 4vh 0;
+	line-height: 3.5vh;
 }
 .formBox label {
+	display: inline-block;
 	color: #AAA;
 	font-weight: 700;
-	width: 35%;
+	width: 30%;
 	text-align: right;
 }
-.formBox select {
+.formBox select,.formBox input {
+	float: right;
 	font-size: inherit;
 	color: #333;
 	width: 60%;
-	margin-left: 5%;
+	margin: 0 5%;
 	text-align: left;
 	border: 1px solid #AAA;
     -webkit-border-radius: 4px;
