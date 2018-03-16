@@ -59,6 +59,18 @@ li:hover {
 body {
 	background-color: #FDFDFF;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CCC;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #CCC;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #CCC;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #CCC;
+}
 .addressButton {
 	display: inline-block;
 	float: right;
@@ -83,19 +95,8 @@ body {
 	text-align: left;
 	text-indent: 5vmin;
 }
-
-.callBackBox {
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 4vmin;
-	letter-spacing: 0.1vmin;
-	padding: 1.5vh 3vw 1.5vh 3vw;
-	border-radius: 1vmin;
-	background-color: #029eb6;
-	width: 90%;
-	margin: 2vh auto 2vh auto;
-	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+.clearBoth {
+	clear: both;
 }
 .contentContainer {
 	border-top: 1px solid #CCC;
@@ -152,7 +153,10 @@ body {
 	line-height: 3.5vh;
 }
 .formBox button {
-	background-color: white;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+	background-color: #0b52a0;
+	color: white !important;
+	line-height: 5vh;
 	float: none !important;
 	margin: 2vh auto !important;
 	width: 50% !important;
@@ -376,20 +380,23 @@ body {
 	margin-top: 2vh;
 }
 .phoneBox {
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 4vmin;
-	letter-spacing: 0.1vmin;
-	padding: 1.5vh 3vw 1.5vh 3vw;
-	border-radius: 1vmin;
-	background-color: #fdc43e;
-	width: 90%;
-	margin: 2vh auto 2vh auto;
-	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+	background-color: #0b52a0;
+	color: white !important;
+	line-height: 5vh;
+	float: none !important;
+	margin: 2vh auto !important;
+	width: 50% !important;
+	text-align: center !important;
 }
-.phoneBox a {
+.phoneBox {
 	color: inherit;
+}
+.phoneBox:hover {
+	background-color: #fdc43e;
+}
+.quote {
+	clear: both;
 }
 .rightContainer {
 	display: inline-block;
@@ -466,11 +473,13 @@ body {
 	z-index: 11;
 }
 #boxContainer {
-	width: 100%;
-	margin: 0 auto 0 auto;
+}
+#boxContainer img {
+	width: 80%;
+	padding-right: 5%;
 }
 #botMenu {
-	
+	background: linear-gradient(to top, rgba(11,82,160,1), rgba(255,255,255,1));
 }
 #botLeft {
 	position: relative;
@@ -642,11 +651,10 @@ body {
 	
 	.botMenuPortrait {
 		position: absolute;
-		top: 70vh;
+		top: 80vh;
 		left: 0;
 		width: 100vw;
 		height: 20vh;
-		background-color: #0b52a0;
 	}
 	.containerPortrait {
 		top: 10vh;
@@ -654,7 +662,7 @@ body {
 		height: 90vh;
 	}
 	.contentPortrait {
-		height: calc(100% - 20vh);
+		height: calc(100% - 10vh);
 	}
 	.menuButtonPortrait {
 	}
