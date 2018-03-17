@@ -27,7 +27,6 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
-	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -590,7 +589,7 @@ body {
 	height: 8vmin;
 }
 #sideMenu {
-	position: absolute;
+	position: fixed;
 	display: table;
 	background-color: #0b52a0;
 	z-index: 20;
@@ -666,6 +665,7 @@ body {
 	}
 	.menuButtonPortrait {
 	}
+
 	.pageTitlePortrait {
 
 	}
@@ -699,7 +699,7 @@ body {
 	.containerLandscape {
 		top: 0;
 		left: 300px;
-		height: 100vh;
+		height: 2000px;
 	}
 	.contentLandscape {
 		height: 100%;
@@ -707,9 +707,13 @@ body {
 	.menuButtonLandscape {
 		display: none !important;
 	}
+	.pageLandscape {
+		/* edit me :) */
+	}
 	.pageTitleLandscape {
 	}
 	.sideMenuLandscape {
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 300px;

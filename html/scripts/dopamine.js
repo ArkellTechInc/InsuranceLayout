@@ -19,16 +19,23 @@ var portraitQuery = window.matchMedia("(orientation: portrait)");
 
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
-	portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
-	portraitUpdate(portraitQuery);             // Call update functions once at run time
+	// Attach listeners to trigger updates on state changes
+	portraitQuery.addListener(portraitUpdate); 
+	// Call update functions once at run time, Swiper is now initialized here
+	portraitUpdate(portraitQuery);
 	updateMenu(); 
-	menuProgress = menuTarget;                 //Prevent animation from running if site is loaded on desktop
+	//Prevent animation from running if site is loaded on desktop
+	menuProgress = menuTarget;
 	
-	 //Initialize Swiper
-		mySwiper = new Swiper ('.swiper-container', {
+
+
+});
+
+function initSwiper(){
+	mySwiper = new Swiper ('.swiper-container', {
 		// Optional parameters
 		direction: 'horizontal',
-		resistanceRatio: 0.5,
+		longSwipesRatio: 0.35,
 		
 		// If we need pagination
 		pagination: {
@@ -37,9 +44,7 @@ $(document).ready(function(){
 		
 
 	});
-
-});
-
+}
 
 function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
@@ -64,7 +69,6 @@ function switchOrientation(mode) {
 	//Switch classes
 	for (i = 0; i < elements.length; i++){
 		if ($("#" + elements[i]).length > 0){
-			console.log("heeaih" + elements[i] + " SEEMS TO EXIST XD");
 			$("#" + elements[i]).removeClass();
 			$("#" + elements[i]).addClass(elements[i] + mode);//Set corresponding class by concatenating the name with mode
 		} else {
@@ -75,15 +79,59 @@ function switchOrientation(mode) {
 	
 	switch (mode) {
 		case "Portrait": 
+			//Responsive anim tings go here
 			hideMenu();
-			//Other responsive anim tings go here
+			
+			window.scrollTo(0, 0); //scrolls to top
+			
+			//Enable pagination
+			if(mySwiper == undefined){
+				initSwiper();
+			}
+			
+			//Prevent vertical scrolling
+			$("body").css("overflow-y", "hidden");
+			
+			togglePaginationClasses(mode);
+			
+			
 			break;
 		case "Landscape":
+			//Responsive anim tings go here
 			showMenu();
-			//Other responsive anim tings go here
+			
+			//Disable pagination
+			if(mySwiper != undefined){
+				mySwiper.destroy();	
+			}
+			mySwiper = undefined;
+			
+			//Allow vertical scrolling
+			$("body").css("overflow-y", "auto");
+			
+			togglePaginationClasses(mode);
+			
 			break;
 	}
 	
+}
+
+function togglePaginationClasses(mode){
+	//pages must have id "page1", "page2", etc
+	var pageNum = 1;
+	while($("#page" + pageNum).length > 0) { //while there exists a page
+		switch(mode){
+			case "Portrait": 
+				$("#page" + pageNum).removeClass();
+				$("#page" + pageNum).addClass("swiper-slide");
+				break;
+			case "Landscape":
+				$("#page" + pageNum).removeClass();
+				$("#page" + pageNum).addClass("pageLandscape");
+				break;
+		}
+		pageNum++;
+	}
 }
 
 
