@@ -87,7 +87,7 @@ body {
 .addressText {
 	float: left;
 	display: inline-block;
-	color: inherit;
+	color: #333;
 	width: 60%;
 }
 .alignLeft {
@@ -328,6 +328,12 @@ body {
 	letter-spacing: 0.1vmin;
 	padding: 1vh 0 1vh 0;
 }
+.infoBoxFooter:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	
+}
 .infoBoxHighlight {
 	color: #666;
 	font-weight: bold;
@@ -371,6 +377,9 @@ body {
 .lemons {
 	display: inline;
 	color: #fdc43e !important;
+}
+.menuNav {
+	border-bottom: 1px solid white;
 }
 .page {
 	position: absolute;
@@ -491,6 +500,7 @@ body {
 	z-index: 11;
 }
 #boxContainer {
+	margin: 5vh 0;
 }
 #boxContainer img {
 	width: 80%;
@@ -597,6 +607,22 @@ body {
 	-ms-user-select: none; 
 	user-select: none;
 }
+#menuImg {
+	margin: 25px 0 0 50px;
+	background-color: white;
+	border-radius: 25px;
+	width: 200px;
+	padding: 25px;
+	object-fit: contain;
+}
+#menuImg:hover{
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#menuImg img {
+	vertical-align: middle;
+	max-width: 150px;
+}
 #phoneIcon {
 	position: relative;
 	z-index: 10;
@@ -661,6 +687,11 @@ body {
 	width: 100%;
 	text-align: center;
 	background-color: #0b52a0;
+}
+#topTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
 }
 #trafficTicketsBox {
 	background-color: #0b52a0;
