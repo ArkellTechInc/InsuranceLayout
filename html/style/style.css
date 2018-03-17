@@ -148,6 +148,16 @@ body {
 	width: 5vmin;
 	height: 5vmin;
 }
+.footerBox {
+	vertical-align: bottom;
+	font-size: 14px;
+	color: #333;
+	padding-bottom: 4vh;
+}
+.footerBox a {
+	color: #0b52a0;
+	text-decoration: underline;
+}
 .formBox {
 	font-size: 4vmin;
 	margin: 4vh 0;
@@ -372,7 +382,7 @@ body {
 	font-size: 3.5vmin;
 	font-weight: bold;
 	text-align: left;
-	padding-top: 2vh;
+	padding: 2vh 0 0 5vmin;
 }
 .pageTitle {
 	display: block;
@@ -385,11 +395,12 @@ body {
 	margin: 10px auto;
 	text-align: left;
 	border-bottom: 1px solid #CCC;
+	padding-bottom: 1vh;
 }
 .phoneBox {
 	color: inherit;
 	display: inline-block;
-	font-size: 3vmin;
+	font-size: 2.5vmin;
 	line-height: 5vmin;
 	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
 	background-color: #0b52a0;
@@ -422,7 +433,7 @@ body {
 	margin: 1vh auto 1vh auto;
 	width: 90%;
 	color: #333;
-	font-size: 3.5vmin;
+	font-size: 3vmin;
 	font-weight: bold;
 	line-height: 5vmin;
 }
@@ -553,6 +564,10 @@ body {
 }
 #impairedDrivingBox {
 	background-color: #3E85D3;
+}
+#lastPage {
+	height: unset !important;
+	border-bottom: none;
 }
 #map {
 	width: 100%;
@@ -758,8 +773,17 @@ body {
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
 @media screen and (min-width: 800px) {
+	.addressButton {
+		font-size: 24px;
+	}
+	.addressText {
+		font-size: 22px;
+	}
 	.formBox {
 		font-size: 24px;
+	}
+	.infoBoxFooter {
+		font-size: 14px;
 	}
 	.text2 {
 		font-size: 24px;
@@ -768,6 +792,9 @@ body {
 		margin-right: auto;
 		text-indent: 0;
 		width: 50vw;
+	}
+	.hoursBox {
+		font-size: 20px;
 	}
 	.hLine {
 		width: 50vw;
@@ -779,6 +806,9 @@ body {
 	}
 	.pageTitle {
 		font-size: 28px;
+	}
+	.staffMember {
+		font-size: 22px;
 	}
 	
 }
