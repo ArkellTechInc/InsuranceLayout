@@ -36,7 +36,10 @@ function initSwiper(){
 		// Optional parameters
 		direction: 'horizontal',
 		longSwipesRatio: 0.35,
-		
+		keyboard: {
+			enabled: true,
+		},
+		mousewheel: true,
 		// If we need pagination
 		pagination: {
 		  el: '.swiper-pagination',
@@ -83,7 +86,8 @@ function switchOrientation(mode) {
 			hideMenu();
 			
 			window.scrollTo(0, 0); //scrolls to top
-			
+			$(".swiperFix1").addClass("swiper-container");
+			$(".swiperFix2").addClass("swiper-wrapper");
 			//Enable pagination
 			if(mySwiper == undefined){
 				initSwiper();
@@ -99,6 +103,8 @@ function switchOrientation(mode) {
 		case "Landscape":
 			//Responsive anim tings go here
 			showMenu();
+			$(".swiperFix1").removeClass("swiper-container");
+			$(".swiperFix2").removeClass("swiper-wrapper");
 			
 			//Disable pagination
 			if(mySwiper != undefined){
@@ -187,7 +193,6 @@ function updateMenu(){
 		$("#container").css("left", (menuProgress * menuWidth) / 2 + "px");
 		$("#container").css("width", 100 + "vw");
 		$("#blackBox").css("opacity",menuProgress);
-		
 	}
 	if(currentOrientation == "Landscape"){
 		$("#container").css("left", (menuProgress * menuWidth) + "px");

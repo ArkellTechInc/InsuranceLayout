@@ -98,10 +98,11 @@ body {
 	clear: both;
 }
 .contentContainer {
-	border-top: 1px solid #CCC;
-	width: 92%;
+	width: 100%;
 	margin: 0 auto 0 auto;
-	padding: 2vh 0 0 0;
+	padding: 2vh 4% 0 4%;
+	height: 100vh;
+	border-bottom: 1px dotted #CCC;
 }
 .darker {
 	color: #333 !important;
@@ -148,6 +149,7 @@ body {
 	height: 5vmin;
 }
 .formBox {
+	font-size: 4vmin;
 	margin: 4vh 0;
 	line-height: 3.5vh;
 }
@@ -164,7 +166,7 @@ body {
 .formBox label {
 	display: inline-block;
 	color: #AAA;
-	font-weight: 700;
+	font-weight: 600;
 	width: 30%;
 	text-align: right;
 }
@@ -287,7 +289,6 @@ body {
 }
 .infoBox {
 	width: 90%;
-	height: 100%;
 	margin: 2vh auto 2vh auto;
 	padding: 3vh 3vw 3vh 3vw;
 	border: 1px solid #EEE;
@@ -368,31 +369,38 @@ body {
 }
 .pageSubTitle {
 	color: #999;
-	font-size: 4vmin;
+	font-size: 3.5vmin;
 	font-weight: bold;
 	text-align: left;
+	padding-top: 2vh;
 }
 .pageTitle {
+	display: block;
+	width: 90%;
+	clear: both;
 	color: #999;
-	font-size: 5vmin;
+	font-size: 4.5vmin;
+	line-height: 6vmin;
 	font-weight: bold;
-	margin-top: 2vh;
-}
-.phoneBox {
-	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
-	background-color: #0b52a0;
-	color: white !important;
-	line-height: 5vh;
-	float: none !important;
-	margin: 2vh auto !important;
-	width: 50% !important;
-	text-align: center !important;
+	margin: 10px auto;
+	text-align: left;
+	border-bottom: 1px solid #CCC;
 }
 .phoneBox {
 	color: inherit;
+	display: inline-block;
+	font-size: 3vmin;
+	line-height: 5vmin;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+	background-color: #0b52a0;
+	color: white !important;
+	float: right !important;
+	text-align: center !important;
+	padding: 0 5vmin;
 }
 .phoneBox:hover {
-	background-color: #fdc43e;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
 }
 .quote {
 	clear: both;
@@ -409,9 +417,9 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .staffMember {
-	border-top: 1px solid #CCC;
-	padding-top: 1vh;
-	margin: 1vh auto 0 auto;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 1vh;
+	margin: 1vh auto 1vh auto;
 	width: 90%;
 	color: #333;
 	font-size: 3.5vmin;
@@ -476,6 +484,8 @@ body {
 #boxContainer img {
 	width: 80%;
 	padding-right: 5%;
+	max-width: 400px;
+	margin: 10vh 0;
 }
 #botMenu {
 	background: linear-gradient(to top, rgba(11,82,160,1), rgba(255,255,255,1));
@@ -703,6 +713,8 @@ body {
 	}
 	.contentLandscape {
 		height: 100%;
+		max-width: 1200px !important;
+		margin: 0 auto;
 	}
 	.menuButtonLandscape {
 		display: none !important;
@@ -762,11 +774,19 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.pageSubTitle {
+		font-size: 24px;
+	}
+	.pageTitle {
+		font-size: 28px;
+	}
+	
 }
 @media screen and (min-width: 450px) and (orientation: portrait) {
 	.formBox {
 		font-size: 24px;
 	}
+	
 	.sideMenuPortrait ul li {
 		font-size: 3vw !important;
 	}
