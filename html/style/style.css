@@ -80,10 +80,6 @@ body {
 	width: 40%;
 	text-align: center;
 }
-.addressButton img {
-	width: 8vmin;
-	height: 8vmin;
-}
 .addressText {
 	float: left;
 	display: inline-block;
@@ -143,17 +139,9 @@ body {
 	display: inline-block;
 	margin: 0 2vmin 0 2vmin;
 }
-.emailIcon img {
-	width: 5vmin;
-	height: 5vmin;
-}
 .extIcon {
 	margin: 0 2vmin 0 2vmin;
 	display: inline-block;
-}
-.extIcon img {
-	width: 5vmin;
-	height: 5vmin;
 }
 .footerBox {
 	vertical-align: bottom;
@@ -221,11 +209,6 @@ body {
 	line-height: 4vmin !important;
 	vertical-align: middle;
 }
-.fullListing img {
-	vertical-align: top;
-	width: 4vmin !important;
-	height: 4vmin !important;
-}
 .halfOpacity {
 	opacity: 0.2;
 }
@@ -255,9 +238,13 @@ body {
 	width: 25vmin;
 	height: 25vmin;
 }
-.iconBoxBig {
-	width: 50vmin;
-	height: 50vmin;
+.iconBox img{
+	position: absolute;
+	width: 15vmin;
+	height: 15vmin;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .iconLabel {
 	position: absolute;
@@ -265,36 +252,6 @@ body {
 	width: 100%;
 	bottom: 0;
 	padding: 2vmin;
-}
-.iconLabelBig {
-	position: absolute;
-	font-size: 6vmin;
-	width: 100%;
-	bottom: 0;
-	padding: 2vmin 2vmin 4vmin 2vmin;
-}
-.icons {
-	width: 25vmin;
-	height: 25vmin;
-	object-fit: contain;
-}
-.iconsBig {
-	width: 50min;
-	height: 50vmin;
-}
-.icons img{
-	display: block;
-	margin: 2.5vmin auto 0 auto;
-	vertical-align: middle;
-	width: 15vmin;
-	height: 15vmin;
-	
-}
-.iconsBig img{
-	margin-top: 5vmin;
-	margin-left: 10vmin;
-	width: 30vmin;
-	height: 30vmin;
 }
 .infoBoxLine {
 	display: inline-block;
@@ -641,10 +598,6 @@ body {
 	min-height: 44px;
 	background-color: #0b52a0;
 	border: none;
-}
-#phoneIcon img {
-	width: 8vmin;
-	height: 8vmin;
 }
 #sideMenu {
 	position: fixed;

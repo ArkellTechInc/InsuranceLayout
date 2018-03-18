@@ -66,15 +66,6 @@ function switchLayout(){
 	switchOrientation(currentOrientation);
 }
 
-function checkSwiper() {
-	if(mySwiper != undefined){
-				mySwiper.slideTo(2);
-			}
-			else
-				document.getElementById("page3").scrollIntoView({behavior: "smooth"}); 
-				//window.location.href = "#staffDir";
-			
-}
 function switchOrientation(mode) {
 	//mode must be "Portrait" or "Landscape"
 	//Switch classes
@@ -213,6 +204,14 @@ function updateMenu(){
 		mySwiper.update();
 	}
 }
+function goToDir() {
+	if(mySwiper != undefined){
+				mySwiper.slideTo(2);
+			}
+			else
+				document.getElementById("page3").scrollIntoView({behavior: "smooth"}); 
+			
+}
 
 
 // -- Pagination Functions ------------------------------------------------
@@ -229,3 +228,4 @@ function pageStyleUpdate() {
 			break;
 	}
 }
+
