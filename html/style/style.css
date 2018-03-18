@@ -132,6 +132,13 @@ body {
 .displayNone {
 	display: none;
 }
+.doodle {
+	width: 100%;
+	object-fit: contain;
+}
+.doodle img {
+	max-height: 80%;
+}
 .emailIcon {
 	display: inline-block;
 	margin: 0 2vmin 0 2vmin;
