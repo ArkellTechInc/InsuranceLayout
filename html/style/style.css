@@ -266,6 +266,13 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.iconContainerSolo {
+	display: inline-block !important;
+}
+.iconBoxSolo {
+	display: inline-block !important;
+	width: 50% !important;
+}
 .iconLabel {
 	position: absolute;
 	font-size: 3vmin;
