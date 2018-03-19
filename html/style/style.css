@@ -255,6 +255,9 @@ body {
 	width: 25vmin;
 	height: 25vmin;
 }
+.iconBox:hover {
+	cursor: pointer;
+}
 .iconBox img{
 	position: absolute;
 	width: 15vmin;

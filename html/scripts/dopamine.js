@@ -19,6 +19,7 @@ var portraitQuery = window.matchMedia("(orientation: portrait)");
 
 //-- Call Back Check -----
 var callBackOff = true;
+var xMark = "\u2716";
 
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
@@ -232,8 +233,42 @@ function pageStyleUpdate() {
 	}
 }
 function toggleCallBack() {
+	$("#getStarted").toggleClass("seeMore");
 	$("#iconContainer").toggle(400);
 	$("#callBackForm").toggle(400);
+	if($("#getStarted").hasClass("seeMore")){
+		$("#getStarted").text(xMark);
+	} else {
+		$("#getStarted").text("Click Here to Get Started");
+	}
 	
+}
+function toggleBox(index){
+	switch(index){
+		case 1: 
+			$("#carelessDrivingBox").show(400);
+			$("#impairedDrivingBox").toggle(400);
+			$("#streetRacingBox").toggle(400);
+			$("#trafficTicketsBox").toggle(400);
+			break;
+		case 2: 
+			$("#carelessDrivingBox").toggle(400);
+			$("#impairedDrivingBox").show(400);
+			$("#streetRacingBox").toggle(400);
+			$("#trafficTicketsBox").toggle(400);
+			break;
+		case 3: 
+			$("#carelessDrivingBox").toggle(400);
+			$("#impairedDrivingBox").toggle(400);
+			$("#streetRacingBox").show(400);
+			$("#trafficTicketsBox").toggle(400);
+			break;
+		case 4: 
+			$("#carelessDrivingBox").toggle(400);
+			$("#impairedDrivingBox").toggle(400);
+			$("#streetRacingBox").toggle(400);
+			$("#trafficTicketsBox").show(400);
+			break;
+	}
 }
 
