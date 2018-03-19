@@ -570,7 +570,7 @@ body {
 	text-align: center;
 }
 #carelessDrivingBox {
-	background-color: #0b52a0;
+	background-color: green;
 }
 
 #container {
@@ -595,7 +595,7 @@ body {
 	border-top: 6px solid white;
 }
 #impairedDrivingBox {
-	background-color: #3E85D3;
+	background-color: orange;
 }
 #lastPage {
 	height: unset !important;
@@ -687,7 +687,7 @@ body {
 }
 #streetRacingBox {
 	clear: both;
-	background-color: #3E85D3;
+	background-color: purple;
 }
 #title {
 	background-color: #0b52a0;
@@ -712,7 +712,7 @@ body {
 	right: 0;
 }
 #trafficTicketsBox {
-	background-color: #0b52a0;
+	background-color: red;
 }
 #vid {
 	margin-top: 5vh;
