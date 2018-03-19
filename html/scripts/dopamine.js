@@ -17,6 +17,9 @@ var portraitBool = true;
 var currentOrientation = "Portrait";
 var portraitQuery = window.matchMedia("(orientation: portrait)");
 
+//-- Call Back Check -----
+var callBackOff = true;
+
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
 	// Attach listeners to trigger updates on state changes
@@ -227,5 +230,10 @@ function pageStyleUpdate() {
 		
 			break;
 	}
+}
+function toggleCallBack() {
+	$("#iconContainer").toggle(400);
+	$("#callBackForm").toggle(400);
+	
 }
 

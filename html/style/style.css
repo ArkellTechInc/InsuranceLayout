@@ -90,6 +90,9 @@ body {
 	text-align: left;
 	text-indent: 5vmin;
 }
+.callBackText {
+	font-size: 16px;
+}
 .clearBoth {
 	clear: both;
 }
@@ -142,6 +145,10 @@ body {
 .extIcon {
 	margin: 0 2vmin 0 2vmin;
 	display: inline-block;
+}
+.faster {
+	font-weight: bold;
+	font-style: italic;
 }
 .footerBox {
 	vertical-align: bottom;
@@ -208,6 +215,16 @@ body {
 	display: inline-block;
 	line-height: 4vmin !important;
 	vertical-align: middle;
+}
+.getStarted {
+	padding: 1vmin;
+	border-radius: 12px;
+	margin: 2vh auto 0 auto;
+	width: 60%;
+	background-color: #3E85D3;
+}
+.getStarted:hover{
+	cursor: pointer;
 }
 .halfOpacity {
 	opacity: 0.2;
@@ -331,6 +348,16 @@ body {
 	color: #333;
 	font-weight: 100;
 	padding: 0 0 0.5vh 0;
+}
+.learnMore {
+	width: 100%;
+	margin: 2vh auto;
+	color: white;
+	background-color: #0b52a0;
+	border-radius: 25px;
+	font-size: 5vmin;
+	font-weight: 500;
+	padding: 3vh 4vw;
 }
 .leftContainer {
 	display: inline-block;
@@ -499,12 +526,33 @@ body {
 	margin: 0 auto 0 auto;
 }
 #botTitle {
-	
 	font-size: 3vh;
 	border: 2px solid white;
 	width: 20vw;
 	padding: 1vh 1vh 1.5vh 1vh;
 	margin: 2vh auto 2vh auto;
+}
+#callBackForm {
+	padding-top: 1vh;
+	border-radius: 12px;
+	background-color: #3E85D3;
+	width: 80%;
+	margin: 2vh auto 0 auto;
+}
+#callBackForm .formBox label {
+	color: white;
+}
+#callBackForm .formBox input {
+	color: black;
+	padding-left: 10px;
+}
+#callBackForm .formBox button {
+	border: none;
+	cursor: pointer;
+}
+#callBackForm .formBox button:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
 }
 #caption {
 	height: 25vh;
@@ -770,8 +818,14 @@ body {
 	.addressText {
 		font-size: 22px;
 	}
+	.callBackText {
+		font-size: 24px;
+	}
 	.formBox {
 		font-size: 24px;
+	}
+	.learnMore {
+		font-size: 28px;
 	}
 	.infoBoxFooter {
 		font-size: 14px;
