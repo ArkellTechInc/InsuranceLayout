@@ -196,6 +196,7 @@ function updateMenu(){
 		$("#container").css("left", (menuProgress * menuWidth) / 2 + "px");
 		$("#container").css("width", 100 + "vw");
 		$("#blackBox").css("opacity",menuProgress);
+		
 	}
 	if(currentOrientation == "Landscape"){
 		$("#container").css("left", (menuProgress * menuWidth) + "px");
@@ -243,32 +244,94 @@ function toggleCallBack() {
 	}
 	
 }
+// Makes the boxes all animated and stuff
 function toggleBox(index){
-	switch(index){
-		case 1: 
-			$("#carelessDrivingBox").show(400);
-			$("#impairedDrivingBox").toggle(400);
-			$("#streetRacingBox").toggle(400);
-			$("#trafficTicketsBox").toggle(400);
-			break;
-		case 2: 
-			$("#carelessDrivingBox").toggle(400);
-			$("#impairedDrivingBox").show(400);
-			$("#streetRacingBox").toggle(400);
-			$("#trafficTicketsBox").toggle(400);
-			break;
-		case 3: 
-			$("#carelessDrivingBox").toggle(400);
-			$("#impairedDrivingBox").toggle(400);
-			$("#streetRacingBox").show(400);
-			$("#trafficTicketsBox").toggle(400);
-			break;
-		case 4: 
-			$("#carelessDrivingBox").toggle(400);
-			$("#impairedDrivingBox").toggle(400);
-			$("#streetRacingBox").toggle(400);
-			$("#trafficTicketsBox").show(400);
-			break;
+	//check to see if the icon box or content is animating
+	if($(".iconBox").is(":animated") || $(".iconContent").is(":animated")){
+		return false;
+	} else {
+		//quick disappear if toggling off
+		if($(".iconContent").is(":visible")){
+			$(".iconContent").toggle();
+		} else {
+			//slow appear
+			$(".iconContent").delay(500).fadeToggle(400);
+		}
+		//toggles the boxes that aren't clicked, and show the neccessary content the other content
+		switch(index){
+			case 1: 
+				$(".iconContent").css("backgroundColor", $("#carelessDrivingBox").css("backgroundColor"));
+				$("#carelessDrivingBox").show(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").show();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 2: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#impairedDrivingBox").css("backgroundColor"));
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").show();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 3: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#streetRacingBox").css("backgroundColor"));
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").show();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 4: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#trafficTicketsBox").css("backgroundColor"));
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").show();
+				
+				break;
+		}
 	}
 }
-
+// JQuery Form Validation Dongle
+$("#contactForm").validate(
+      {
+        rules: 
+        {
+          fullname: 
+          {
+            required: true
+          },
+          email: 
+          {
+            required: true,
+            email: true
+          }
+        },
+        messages: 
+        {
+          fullname: 
+          {
+            required: "Please enter your name"
+          },
+          email: 
+          {
+            required: "Please enter an email."
+          }
+		}
+	}
+);

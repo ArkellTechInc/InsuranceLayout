@@ -8,7 +8,9 @@
 	<title>Sweet Lemons Insurance</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="swiper/css/swiper.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
+
 </head>
 <body>
 	
@@ -148,46 +150,52 @@
 						<div id="page2" class="swiper-slide">
 							<div class="contentContainer">
 								<h1 class="pageTitle">Your Free Insurance Quote <a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>
-								<div class="formBox" name="" action="" method="">
-									<label>Interested In</label>
-									<select class="floatRight" name="interestedIn" form="contactForm">
-										<option>High Risk Driver's Recovery Program</option>
-										<option>General Information</option>
-										<option>Call Back</option>
-									</select>
+								<div class="formContainer">
+									<form id="contactForm" method="post">
+										<fieldset>
+											<input type='hidden' name='submitted' id='submitted' value='1'/>
+											<div class="formBox" name="" action="" method="">
+												<label>Interested In</label>
+												<select class="floatRight" name="interestedIn" id="interestedIn">
+													<option>High Risk Driver's Recovery Program</option>
+													<option>General Information</option>
+													<option>Call Back</option>
+												</select>
+											</div>
+											<div class="formBox">
+												<label>Name*</label>
+												<input type="text" placeholder="John Doe" name="name" id="name" maxlength="50" required></input>
+											</div>
+											<div class="formBox">
+												<label>Phone*</label>
+												<input type="tel" placeholder="123-456-7890" name="phone" id="phone" maxlength="15" required></input>
+											</div>
+											<div class="formBox">
+												<label>Email*</label>
+												<input type="email" placeholder="example@email.com" name="email" id="email" maxlength="50" required></input>
+											</div>
+											<div class="formBox">
+												<label>Subject Line</label>
+												<input type="text" placeholder="I need a quote" name="subject" id="subject"></input>
+											</div>
+											<div class="formBox">
+												<label>Message</label>
+												<textarea form="contactForm" rows="3" placeholder="Please call me back ASAP." name="message" id="message"></textarea>
+											</div>
+											<br />
+											<div class="formBox">
+												<button type="submit" name="Submit" id="Submit">Submit</button>
+											</div>
+										</fieldset>
+									</form>
 								</div>
-								<form id="contactForm">
-									<div class="formBox">
-										<label>Name*</label>
-										<input type="text" placeholder="John Doe" name="" required></input>
-									</div>
-									<div class="formBox">
-										<label>Phone*</label>
-										<input type="tel" placeholder="123-456-7890" name="" required></input>
-									</div>
-									<div class="formBox">
-										<label>Email*</label>
-										<input type="email" placeholder="example@email.com" name="" required></input>
-									</div>
-									<div class="formBox">
-										<label>Subject Line</label>
-										<input type="text" placeholder="I need a quote" name=""></input>
-									</div>
-									<div class="formBox">
-										<label>Additional Info</label>
-										<textarea form="contactForm" rows="3" placeholder="Please call me back ASAP." name=""></textarea>
-									</div>
-									<div class="formBox">
-										<button type="submit">Submit</button>
-									</div>
-								</form>
 							</div>
 						</div>
 						<br />
 						<!-- Page 3 --------------------------------------->
 						<a name="staffDir"><div id="page3" class="swiper-slide"></a>
 							<div class="contentContainer">
-								<h1 class="pageTitle">Staff Directory<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>						
+								<h1 class="pageTitle">Staff Directory 1/2<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>						
 								<div class="staffMember fullListing">
 									Vincent Pronesti<div class="jobTitle">Managing Partner</div>
 									<a href="mailto:vpronesti@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
@@ -363,8 +371,185 @@
 						<br />
 						<!-- Page 4 --------------------------------------->
 						<div id="page4" class="swiper-slide">
+							<div class="contentContainer">
+								<h1 id="dir2" class="pageTitle">Staff Directory 2/2<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>						
+								<div class="staffMember fullListing">
+									Sabina Yurkov<div class="jobTitle">Personal Lines Customer Service</div>
+									<a href="mailto:syurkov@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
+										<div class="emailIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="4vmin" height="4vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g><path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M13,368c0,27.614,22.386,50,50,50h376
+												c27.614,0,50-22.386,50-50V136c0-27.614-22.386-50-50-50H63c-27.614,0-50,22.386-50,50V368z"/></g>
+												<path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M249,310.999c-0.514,0-1.027-0.196-1.417-0.589
+												L36.915,100.744c-0.779-0.783-0.776-2.049,0.006-2.829c0.783-0.779,2.049-0.776,2.829,0.006l209.265,208.257L462.93,93.907
+												c0.788-0.774,2.054-0.764,2.828,0.023c0.774,0.787,0.765,2.054-0.023,2.828L250.402,310.425
+												C250.013,310.808,249.506,310.999,249,310.999z"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="43.999" y1="414.332" x2="197.619" y2="257.384"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="301.473" y1="260.332" x2="453.979" y2="411.02"/>
+											</svg>
+										</div>
+									</a>
+									syurkov@youngsinsurance.ca
+									<a href="tel:905-335-6925p228">
+										<div class="extIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="4vmin" height="4vmin" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g>
+												<path fill="#020202" d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0
+												C114.625,0,0,114.625,0,256s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+												c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.404,8.5l-13.688,13.688
+												c-49.75-13.469-88.782-52.5-102.22-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+												c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+												c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.346,173.156,70.781
+												c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"/></g>
+											</svg>
+										</div>
+									</a>
+									x228
+								</div>
+								<div class="staffMember fullListing">
+									Jessica Smith<div class="jobTitle">Commercial Lines Customer Service</div>
+									<a href="mailto:jsmith@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
+										<div class="emailIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="4vmin" height="4vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g><path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M13,368c0,27.614,22.386,50,50,50h376
+												c27.614,0,50-22.386,50-50V136c0-27.614-22.386-50-50-50H63c-27.614,0-50,22.386-50,50V368z"/></g>
+												<path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M249,310.999c-0.514,0-1.027-0.196-1.417-0.589
+												L36.915,100.744c-0.779-0.783-0.776-2.049,0.006-2.829c0.783-0.779,2.049-0.776,2.829,0.006l209.265,208.257L462.93,93.907
+												c0.788-0.774,2.054-0.764,2.828,0.023c0.774,0.787,0.765,2.054-0.023,2.828L250.402,310.425
+												C250.013,310.808,249.506,310.999,249,310.999z"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="43.999" y1="414.332" x2="197.619" y2="257.384"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="301.473" y1="260.332" x2="453.979" y2="411.02"/>
+											</svg>
+										</div>
+									</a>
+									jsmith@youngsinsurance.ca
+									<a href="tel:905-335-6925p230">
+										<div class="extIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="4vmin" height="4vmin" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g>
+												<path fill="#020202" d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0
+												C114.625,0,0,114.625,0,256s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+												c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.404,8.5l-13.688,13.688
+												c-49.75-13.469-88.782-52.5-102.22-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+												c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+												c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.346,173.156,70.781
+												c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"/></g>
+											</svg>
+										</div>
+									</a>
+									x230
+								</div>
+								<div class="staffMember fullListing">
+									Danny Corine<div class="jobTitle">Commercial Lines Broker / Service Representative</div>
+									<a href="mailto:dcorine@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
+										<div class="emailIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="4vmin" height="4vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g><path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M13,368c0,27.614,22.386,50,50,50h376
+												c27.614,0,50-22.386,50-50V136c0-27.614-22.386-50-50-50H63c-27.614,0-50,22.386-50,50V368z"/></g>
+												<path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M249,310.999c-0.514,0-1.027-0.196-1.417-0.589
+												L36.915,100.744c-0.779-0.783-0.776-2.049,0.006-2.829c0.783-0.779,2.049-0.776,2.829,0.006l209.265,208.257L462.93,93.907
+												c0.788-0.774,2.054-0.764,2.828,0.023c0.774,0.787,0.765,2.054-0.023,2.828L250.402,310.425
+												C250.013,310.808,249.506,310.999,249,310.999z"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="43.999" y1="414.332" x2="197.619" y2="257.384"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="301.473" y1="260.332" x2="453.979" y2="411.02"/>
+											</svg>
+										</div>
+									</a>
+									dcorine@youngsinsurance.ca
+									<a href="tel:905-335-6925p224">
+										<div class="extIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="4vmin" height="4vmin" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g>
+												<path fill="#020202" d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0
+												C114.625,0,0,114.625,0,256s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+												c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.404,8.5l-13.688,13.688
+												c-49.75-13.469-88.782-52.5-102.22-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+												c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+												c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.346,173.156,70.781
+												c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"/></g>
+											</svg>
+										</div>
+									</a>
+									x224
+								</div>
+								<div class="staffMember fullListing">
+									Jennifer Blanco<div class="jobTitle">Technical Service Representative</div>
+									<a href="mailto:jblanco@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
+										<div class="emailIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="4vmin" height="4vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g><path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M13,368c0,27.614,22.386,50,50,50h376
+												c27.614,0,50-22.386,50-50V136c0-27.614-22.386-50-50-50H63c-27.614,0-50,22.386-50,50V368z"/></g>
+												<path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M249,310.999c-0.514,0-1.027-0.196-1.417-0.589
+												L36.915,100.744c-0.779-0.783-0.776-2.049,0.006-2.829c0.783-0.779,2.049-0.776,2.829,0.006l209.265,208.257L462.93,93.907
+												c0.788-0.774,2.054-0.764,2.828,0.023c0.774,0.787,0.765,2.054-0.023,2.828L250.402,310.425
+												C250.013,310.808,249.506,310.999,249,310.999z"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="43.999" y1="414.332" x2="197.619" y2="257.384"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="301.473" y1="260.332" x2="453.979" y2="411.02"/>
+											</svg>
+										</div>
+									</a>
+									jblanco@youngsinsurance.ca
+									<a href="tel:905-335-6925p226">
+										<div class="extIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="4vmin" height="4vmin" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g>
+												<path fill="#020202" d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0
+												C114.625,0,0,114.625,0,256s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+												c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.404,8.5l-13.688,13.688
+												c-49.75-13.469-88.782-52.5-102.22-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+												c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+												c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.346,173.156,70.781
+												c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"/></g>
+											</svg>
+										</div>
+									</a>
+									x226
+								</div>
+								<div class="staffMember fullListing">
+									Jared Melendez<div class="jobTitle">Administrator</div>
+									<a href="mailto:jmelendez@youngsinsurance.ca?Subject=Website%20Inquiry" target="_top">
+										<div class="emailIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="4vmin" height="4vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g><path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M13,368c0,27.614,22.386,50,50,50h376
+												c27.614,0,50-22.386,50-50V136c0-27.614-22.386-50-50-50H63c-27.614,0-50,22.386-50,50V368z"/></g>
+												<path fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" d="M249,310.999c-0.514,0-1.027-0.196-1.417-0.589
+												L36.915,100.744c-0.779-0.783-0.776-2.049,0.006-2.829c0.783-0.779,2.049-0.776,2.829,0.006l209.265,208.257L462.93,93.907
+												c0.788-0.774,2.054-0.764,2.828,0.023c0.774,0.787,0.765,2.054-0.023,2.828L250.402,310.425
+												C250.013,310.808,249.506,310.999,249,310.999z"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="43.999" y1="414.332" x2="197.619" y2="257.384"/>
+												<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="301.473" y1="260.332" x2="453.979" y2="411.02"/>
+											</svg>
+										</div>
+									</a>
+									jmelendez@youngsinsurance.ca
+									<a href="tel:905-335-6925p221">
+										<div class="extIcon fullListing">
+											<svg style="vertical-align: top;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="4vmin" height="4vmin" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g>
+												<path fill="#020202" d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0
+												C114.625,0,0,114.625,0,256s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375
+												c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.404,8.5l-13.688,13.688
+												c-49.75-13.469-88.782-52.5-102.22-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5
+												c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5
+												c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.346,173.156,70.781
+												c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"/></g>
+											</svg>
+										</div>
+									</a>
+									x221
+								</div>
+							</div>
+						</div>
+						<br />
+						<!-- Page 5 --------------------------------------->
+						<div id="page5" class="swiper-slide">
 							<div class="contentContainer" id="lastPage">
-							<h1 class="pageTitle">A Product Of Youngs Insurance</h1>
+							<h1 class="pageTitle">A Product Of Youngs Insurance<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>
 								<a href="https://www.youngsinsurance.ca/site/home" target="_blank"><div id="boxContainer"><img src="images/youngsLogo.jpg" alt="youngs insurance logo"></div></a>
 								<div class="footerBox">
 									444 Plains Rd. E., Burlington, ON - Call 905-335-6925, Toll-Free 1-855-HI-RISK-0 for more info.<br />

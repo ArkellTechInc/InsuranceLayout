@@ -162,30 +162,51 @@ body {
 }
 .formBox {
 	font-size: 4vmin;
-	margin: 4vh 0;
+	margin: 3vh 0;
 	line-height: 3.5vh;
 }
 .formBox button {
-	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
-	background-color: #0b52a0;
-	color: white !important;
+	display: block;
 	line-height: 5vh;
+	font-size: 4vmin;
+	clear: both;
 	float: none !important;
-	margin: 2vh auto !important;
-	width: 50% !important;
+	margin: 1vh auto !important;
 	text-align: center !important;
+	background-color: #3E85D3;
+	border-radius: 12px;
+	padding: 1vh 5vmin;
+	border: none;
+}
+.formBox button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
 }
 .formBox label {
 	display: inline-block;
-	color: #AAA;
+	color: white;
 	font-weight: 600;
 	width: 30%;
 	text-align: right;
 }
+.formBox label.error{
+	position: absolute;
+	left: 0;
+	display: block;
+	color: white;
+	text-align: center!important;
+	width: 100vw;
+	font-size: 75%;
+	font-style: italic;
+	transform: translate(0,-190%);
+	-ms-transform: translate(0, -190%);
+    -webkit-transform: translate(0, -190%);
+}
 .formBox input {
 	padding: 2px 4px;
 }
-.formBox button,.formBox select,.formBox input,.formBox textarea {
+.formBox select,.formBox input,.formBox textarea {
 	float: right;
 	font-size: inherit;
 	color: #333;
@@ -207,9 +228,22 @@ body {
 	overflow: hidden;
 	
 }
+.formBox select {
+	background-color: white;
+}
 .formBox select option {
 	font-size: inherit;
 	color: inherit;
+}
+.formBox textarea {
+	margin-bottom: 2vh;
+}
+.formContainer {
+	margin-top: 4vh;
+	padding: 0.1vh 0;
+	line-height: 0;
+	background-color: #0b52a0;
+	border-radius: 24px;
 }
 .fullListing {
 	display: inline-block;
@@ -265,13 +299,13 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
-.iconContainerSolo {
-	display: inline-block !important;
-}
-.iconBoxSolo {
-	display: inline-block !important;
-	width: 50% !important;
+.iconContent {
+	font-size: 4vmin;
+	border-radius: 12px;
+	padding: 2vh 5vmin;
 }
 .iconLabel {
 	position: absolute;
@@ -396,28 +430,30 @@ body {
 }
 .pageTitle {
 	display: block;
-	width: 90%;
 	clear: both;
-	color: #999;
+	color: white;
 	font-size: 4.5vmin;
-	line-height: 6vmin;
 	font-weight: bold;
-	margin: 10px auto;
+	margin: 0.5vh auto;
 	text-align: left;
-	border-bottom: 1px solid #CCC;
-	padding-bottom: 1vh;
+	border-radius: 12px;
+	padding: 3vh 2vmin;
+	background-color: #0b52a0;
 }
 .phoneBox {
 	color: inherit;
 	display: inline-block;
-	font-size: 2.5vmin;
-	line-height: 5vmin;
-	background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
-	background-color: #0b52a0;
+	font-size: 4.5vmin;
+	font-weight: 400;
+	background-color: #3E85D3;
+	border-radius: 12px;
 	color: white !important;
 	float: right !important;
 	text-align: center !important;
-	padding: 0 5vmin;
+	padding: 1.5vh 2vmin;
+	transform: translate(0,-25%);
+	-ms-transform: translate(0, -25%);
+    -webkit-transform: translate(0, -25%);
 }
 .phoneBox:hover {
 	opacity: 0.8;
@@ -545,16 +581,19 @@ body {
 #callBackForm {
 	padding-top: 1vh;
 	border-radius: 12px;
-	background-color: #3E85D3;
-	width: 80%;
+	width: 100%;
 	margin: 2vh auto 0 auto;
 }
 #callBackForm .formBox label {
 	color: white;
+	width: auto;
 }
 #callBackForm .formBox input {
+	float: none;
 	color: black;
 	padding-left: 10px;
+	margin-left: 2vmin!important;
+	width: auto;
 }
 #callBackForm .formBox button {
 	border: none;
@@ -833,9 +872,16 @@ body {
 	}
 	.formBox {
 		font-size: 24px;
+		margin: 36px;
+	}
+	.formBox label.error{
+		
 	}
 	.learnMore {
 		font-size: 28px;
+	}
+	.iconContent {
+		font-size: 22px;
 	}
 	.infoBoxFooter {
 		font-size: 14px;
@@ -860,6 +906,9 @@ body {
 		font-size: 24px;
 	}
 	.pageTitle {
+		font-size: 28px;
+	}
+	.phoneBox {
 		font-size: 28px;
 	}
 	.staffMember {
